@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <public name="Theme.Skylight.DayNight" type="style" />
+  <public name="Theme.Skylight.Light" type="style" />
+  <public name="Theme.Skylight.Dark" type="style" />
+
+  <public name="skylight_dawn" type="color" />
+  <public name="skylight_sunrise" type="color" />
+  <public name="skylight_sunset" type="color" />
+  <public name="skylight_dusk" type="color" />
+
+  <public name="skylight_launcherIcon_sun" type="color" />
+  <public name="skylight_launcherIcon_ground" type="color" />
+  <public name="skylight_launcherIcon_upperSky" type="color" />
+  <public name="skylight_launcherIcon_lowerSky" type="color" />
+</resources>
