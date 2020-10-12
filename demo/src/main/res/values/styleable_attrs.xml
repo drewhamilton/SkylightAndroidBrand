@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <declare-styleable name="Banner">
-    <attr name="bannerBackground" format="reference" />
     <attr name="bannerButtonRippleColor" format="color" />
     <attr name="bannerButtonTextColor" format="color" />
     <attr name="bannerMessage" format="string" />

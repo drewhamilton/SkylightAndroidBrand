@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <!--Light status bar is not supported below v23, so keep it dark-->
-  <color name="skylight_systemStatusBar_dark">@color/skylight_darkPurple_extraDark</color>
+  <color name="skylight_systemStatusBar_dark">@color/skylight_darkPurple_dark</color>
   <color name="skylight_systemStatusBar_light">@color/skylight_darkPurple_extraDark</color>
 
   <!--Light navigation bar is not supported below v27, so keep it dark-->

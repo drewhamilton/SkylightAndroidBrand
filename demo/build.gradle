@@ -42,4 +42,5 @@ dependencies {
 
     implementation deps.appCompat
     implementation deps.constraintLayout
+    implementation deps.coreKtx
 }

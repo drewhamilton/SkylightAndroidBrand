@@ -28,9 +28,6 @@ class Banner : ConstraintLayout {
     private fun initAttributeSet(attrs: AttributeSet) {
         val styledAttributes = context.obtainStyledAttributes(attrs, R.styleable.Banner)
         try {
-            val background = styledAttributes.getDrawable(R.styleable.Banner_bannerBackground)
-            if (background != null) ViewCompat.setBackground(binding.bannerBackground, background)
-
             val messageTextColor = styledAttributes.getColorStateList(R.styleable.Banner_bannerMessageTextColor)
             if (messageTextColor != null)
                 binding.bannerMessageView.setTextColor(messageTextColor)

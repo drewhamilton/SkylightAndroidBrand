@@ -7,44 +7,8 @@
     tools:layout_height="wrap_content"
     tools:layout_width="match_parent"
 
+    tools:background="?android:colorBackground"
     tools:parentTag="dev.drewhamilton.skylight.android.brand.demo.Banner">
-
-  <!--region Background-->
-  <View
-      android:id="@+id/bannerBackground"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-
-      android:background="?colorSurface"
-
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintBottom_toTopOf="@+id/bannerDivider" />
-
-  <View
-      android:id="@+id/bannerDivider"
-      android:layout_width="0dp"
-      android:layout_height="1dp"
-
-      android:alpha="0.12"
-      android:background="?colorOnBackground"
-
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/bannerBackground"
-      app:layout_constraintBottom_toTopOf="@+id/bannerSpace" />
-
-  <Space
-      android:id="@+id/bannerSpace"
-      android:layout_width="0dp"
-      android:layout_height="1dp"
-
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/bannerDivider"
-      app:layout_constraintBottom_toBottomOf="parent" />
-  <!--endregion-->
 
   <TextView
       android:id="@+id/bannerMessageView"

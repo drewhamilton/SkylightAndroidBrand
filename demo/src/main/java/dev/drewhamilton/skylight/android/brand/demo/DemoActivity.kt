@@ -1,11 +1,15 @@
 package dev.drewhamilton.skylight.android.brand.demo
 
+import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.constraintlayout.motion.widget.MotionLayout
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dev.drewhamilton.skylight.android.brand.demo.databinding.BottomSheetBinding
@@ -24,9 +28,22 @@ class DemoActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
         }
+        if (Build.VERSION.SDK_INT >= 29) {
+            WindowCompat.setDecorFitsSystemWindows(window, false)
+        }
 
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, windowInsets ->
+            with(windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())) {
+                binding.toolbar.updatePadding(top = top)
+                binding.scrollView.updatePadding(bottom = bottom)
+                binding.root.updatePadding(left = left, right = right)
+            }
+
+            windowInsets
+        }
 
         binding.darkModeSwitch.isChecked = resources.getBoolean(R.bool.nightMode)
         binding.darkModeSwitch.setOnCheckedChangeListener { _, isChecked ->
@@ -129,7 +146,5 @@ class DemoActivity : AppCompatActivity() {
         private const val KEY_IS_ERROR_SHOWING = "is_error_showing"
         private const val KEY_IS_BOTTOM_SHEET_SHOWING = "is_bottom_sheet_showing"
         private const val KEY_IS_ALERT_DIALOG_SHOWING = "is_alert_dialog_showing"
-
-        private const val ANIMATION_DURATION = 350L
     }
 }
