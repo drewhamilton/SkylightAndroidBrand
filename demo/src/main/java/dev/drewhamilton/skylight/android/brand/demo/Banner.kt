@@ -73,6 +73,12 @@ class Banner : ConstraintLayout {
             binding.secondaryButton.text = value
         }
 
+    override fun setEnabled(enabled: Boolean) {
+        super.setEnabled(enabled)
+        binding.primaryButton.isEnabled = enabled
+        binding.secondaryButton.isEnabled = enabled
+    }
+
     fun setBannerMessage(@StringRes resId: Int) = binding.bannerMessageView.setText(resId)
 
     fun setPrimaryButtonText(@StringRes resId: Int) = binding.primaryButton.setText(resId)

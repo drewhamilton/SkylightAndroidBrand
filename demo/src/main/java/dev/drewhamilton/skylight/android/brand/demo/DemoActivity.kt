@@ -2,8 +2,8 @@ package dev.drewhamilton.skylight.android.brand.demo
 
 import android.os.Bundle
 import android.os.CountDownTimer
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.motion.widget.MotionLayout
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dev.drewhamilton.skylight.android.brand.demo.databinding.BottomSheetBinding
@@ -28,15 +28,16 @@ class DemoActivity : AppCompatActivity() {
             binding.alertDialogButton.isEnabled = isChecked
         }
 
+        binding.root.addTransitionListener(ErrorBannerTransitionListener(binding.errorBanner))
         binding.errorBanner.setPrimaryButtonOnClickListener {
             TryAgain { binding.root.transitionToEnd() }.start()
             binding.root.transitionToStart()
         }
         binding.errorBanner.setSecondaryButtonOnClickListener { binding.root.transitionToStart() }
+        binding.errorBanner.isEnabled = false
+
         binding.errorBannerButton.setOnClickListener { binding.root.transitionToEnd() }
-
         binding.bottomSheetButton.setOnClickListener { showBottomSheet() }
-
         binding.alertDialogButton.setOnClickListener { showAlertDialog() }
 
         if (savedInstanceState != null) {
@@ -85,6 +86,28 @@ class DemoActivity : AppCompatActivity() {
     ): CountDownTimer(300, 300) {
         override fun onFinish() = showError()
         override fun onTick(millisUntilFinished: Long) = Unit
+    }
+
+    private class ErrorBannerTransitionListener(
+        private val errorBanner: Banner
+    ) : MotionLayout.TransitionListener {
+        override fun onTransitionStarted(motionLayout: MotionLayout, startId: Int, endId: Int) = Unit
+
+        override fun onTransitionChange(
+            motionLayout: MotionLayout,
+            startId: Int, endId: Int,
+            progress: Float
+        ) = Unit
+
+        override fun onTransitionCompleted(motionLayout: MotionLayout, currentId: Int) {
+            errorBanner.isEnabled = currentId == R.id.errorBannerShowing
+        }
+
+        override fun onTransitionTrigger(
+            motionLayout: MotionLayout,
+            triggerId: Int,
+            positive: Boolean, progress: Float
+        ) = Unit
     }
 
     private companion object {
