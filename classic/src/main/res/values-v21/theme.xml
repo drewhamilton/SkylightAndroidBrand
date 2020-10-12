@@ -5,13 +5,13 @@
   <style name="Theme.Skylight.Light" parent="Base.V21.Theme.Skylight.Light" />
 
   <style name="Base.V21.Theme.Skylight.Dark" parent="Base.V15.Theme.Skylight.Dark">
-    <item name="android:statusBarColor">?android:navigationBarColor</item>
-    <item name="android:navigationBarColor">@color/skylight_darkPurple_extraDark</item>
+    <item name="android:statusBarColor">@color/skylight_systemStatusBar_dark</item>
+    <item name="android:navigationBarColor">@color/skylight_systemNavigationBar_dark</item>
   </style>
 
   <style name="Base.V21.Theme.Skylight.Light" parent="Base.V15.Theme.Skylight.Light">
-    <item name="android:statusBarColor">?android:navigationBarColor</item>
-    <item name="android:navigationBarColor">@color/skylight_darkPurple_extraDark</item>
+    <item name="android:statusBarColor">@color/skylight_systemStatusBar_light</item>
+    <item name="android:navigationBarColor">@color/skylight_systemNavigationBar_light</item>
   </style>
 
 </resources>

@@ -43,7 +43,7 @@
     <item name="colorSecondary">?colorPrimary</item>
     <item name="colorSecondaryVariant">?colorPrimaryVariant</item>
     <item name="android:colorBackground">@color/skylight_amber_extraLight</item>
-    <item name="colorSurface">@color/skylight_amber</item>
+    <item name="colorSurface">@color/skylight_amber_light</item>
 
     <item name="colorError">@color/skylight_pink_dark</item>
 

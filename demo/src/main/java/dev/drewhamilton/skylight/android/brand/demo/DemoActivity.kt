@@ -2,7 +2,9 @@ package dev.drewhamilton.skylight.android.brand.demo
 
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.constraintlayout.motion.widget.MotionLayout
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -19,8 +21,22 @@ class DemoActivity : AppCompatActivity() {
     private var isAlertDialogShowing: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        if (savedInstanceState == null) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        }
+
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        binding.darkModeSwitch.isChecked = resources.getBoolean(R.bool.nightMode)
+        binding.darkModeSwitch.setOnCheckedChangeListener { _, isChecked ->
+            // Delay night mode so the switch animation completes:
+            afterDelay {
+                AppCompatDelegate.setDefaultNightMode(
+                    if (isChecked) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+                )
+            }
+        }
 
         binding.buttonsSwitch.setOnCheckedChangeListener { _, isChecked ->
             binding.errorBannerButton.isEnabled = isChecked
@@ -30,7 +46,7 @@ class DemoActivity : AppCompatActivity() {
 
         binding.root.addTransitionListener(ErrorBannerTransitionListener(binding.errorBanner))
         binding.errorBanner.setPrimaryButtonOnClickListener {
-            TryAgain { binding.root.transitionToEnd() }.start()
+            afterDelay { binding.root.transitionToEnd() }
             binding.root.transitionToStart()
         }
         binding.errorBanner.setSecondaryButtonOnClickListener { binding.root.transitionToStart() }
@@ -78,14 +94,13 @@ class DemoActivity : AppCompatActivity() {
     }
 
     /**
-     * Listens for the motion layout's next transition to complete and then removes itself and transitions back to the
-     * layout's end state.
+     * Executes [block] after [millis].
      */
-    private class TryAgain(
-        private val showError: () -> Unit
-    ): CountDownTimer(300, 300) {
-        override fun onFinish() = showError()
-        override fun onTick(millisUntilFinished: Long) = Unit
+    private inline fun afterDelay(millis: Long = 400, crossinline block: () -> Unit) {
+        object : CountDownTimer(millis, millis) {
+            override fun onFinish() = block()
+            override fun onTick(millisUntilFinished: Long) = Unit
+        }.start()
     }
 
     private class ErrorBannerTransitionListener(
@@ -114,5 +129,7 @@ class DemoActivity : AppCompatActivity() {
         private const val KEY_IS_ERROR_SHOWING = "is_error_showing"
         private const val KEY_IS_BOTTOM_SHEET_SHOWING = "is_bottom_sheet_showing"
         private const val KEY_IS_ALERT_DIALOG_SHOWING = "is_alert_dialog_showing"
+
+        private const val ANIMATION_DURATION = 350L
     }
 }

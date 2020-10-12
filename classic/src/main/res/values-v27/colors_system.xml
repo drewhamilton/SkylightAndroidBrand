@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="skylight_systemStatusBar_dark">@color/skylight_darkPurple_dark</color>
+  <color name="skylight_systemStatusBar_light">@color/skylight_amber_extraLight</color>
+
+  <color name="skylight_systemNavigationBar_dark">@color/skylight_darkPurple_dark</color>
+  <color name="skylight_systemNavigationBar_light">@color/skylight_amber_extraLight</color>
+</resources>

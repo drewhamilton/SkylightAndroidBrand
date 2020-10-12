@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
+    android:background="?android:colorBackground"
     android:orientation="vertical"
 
     app:layoutDescription="@xml/display_banner_motion"
@@ -25,6 +26,23 @@
       style="@style/Widget.SkylightDemo.Banner.Error" />
 
   <com.google.android.material.switchmaterial.SwitchMaterial
+      android:id="@+id/darkModeSwitch"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+
+      android:checked="@bool/nightMode"
+      android:padding="@dimen/marginHorizontal_mainText"
+      android:text="Dark mode"
+      android:textAppearance="?textAppearanceSubtitle1"
+
+      app:layout_constraintBottom_toTopOf="@+id/buttonsSwitch"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/errorBanner"
+      app:layout_constraintVertical_chainStyle="packed"
+      app:layout_constraintVertical_bias="0" />
+
+  <com.google.android.material.switchmaterial.SwitchMaterial
       android:id="@+id/buttonsSwitch"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
@@ -37,9 +55,7 @@
       app:layout_constraintBottom_toTopOf="@+id/errorBannerButton"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/errorBanner"
-      app:layout_constraintVertical_chainStyle="packed"
-      app:layout_constraintVertical_bias="0" />
+      app:layout_constraintTop_toBottomOf="@+id/darkModeSwitch" />
 
   <com.google.android.material.button.MaterialButton
       android:id="@+id/errorBannerButton"
@@ -82,5 +98,232 @@
       app:layout_constraintTop_toBottomOf="@+id/bottomSheetButton"
 
       style="?materialButtonStyle" />
+
+  <ScrollView
+      android:id="@+id/scrollView"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/alert_dialog_button">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="16dp"
+          android:text="abc 123"
+          android:textAppearance="?textAppearanceHeadline5" />
+
+
+    </LinearLayout>
+
+  </ScrollView>
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
