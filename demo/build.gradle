@@ -8,7 +8,7 @@ android {
     buildToolsVersion '30.0.2'
 
     defaultConfig {
-        applicationId 'dev.drewhamilton.skylight.android.brand'
+        applicationId 'dev.drewhamilton.skylight.android.brand.demo'
         minSdkVersion projectVersions.minSdk
         targetSdkVersion projectVersions.targetSdk
         versionCode 1
@@ -23,6 +23,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildFeatures {
+        viewBinding true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -36,4 +41,6 @@ dependencies {
     implementation project(':classic')
 
     implementation deps.appCompat
+    implementation deps.constraintLayout
+    implementation deps.coreKtx
 }
