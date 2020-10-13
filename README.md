@@ -5,7 +5,7 @@
 Comprises branding and theming used for [Skylight](https://github.com/drewhamilton/SkylightAndroid) apps.
 
 ## Download
-
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/dev.drewhamilton.skylight.android.brand/skylight-brand-xml-theme/badge.svg)](https://maven-badges.herokuapp.com/maven-central/dev.drewhamilton.skylight.android.brand/skylight-brand-xml-theme)
 
 Skylight Android will be available in Maven Central. Not yet tho. It is still in pre-release development, and the API
 may undergo breaking changes before version 1.0.0.
