@@ -6,7 +6,7 @@ version = rootProject.VERSION_NAME
 
 task sourcesJar(type: Jar) {
     archiveClassifier.set 'sources'
-    from sourceSets.main.allSource
+    from android.sourceSets.main.java.srcDirs
 }
 
 task javadoc(type: Javadoc) {
@@ -17,7 +17,7 @@ task javadoc(type: Javadoc) {
     }
 }
 
-task javadocJar(type: Jar, dependsOn: javdoc) {
+task javadocJar(type: Jar, dependsOn: javadoc) {
     archiveClassifier.set 'javadoc'
     from javadoc.destinationDir
 }
