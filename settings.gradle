@@ -1,4 +1,4 @@
 rootProject.name = "Skylight Android Brand"
 
-include ':classic'
-include ':demo'
+include ':xml-theme'
+include ':xml-theme-demo'

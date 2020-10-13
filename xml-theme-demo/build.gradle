@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.library'
+    id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
 
@@ -8,28 +8,24 @@ android {
     buildToolsVersion '30.0.2'
 
     defaultConfig {
+        applicationId 'dev.drewhamilton.skylight.android.brand.demo'
         minSdkVersion projectVersions.minSdk
         targetSdkVersion projectVersions.targetSdk
-        versionName 'TODO'
+        versionCode 1
+        versionName '1.0'
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
-    }
-
-    signingConfigs {
-        release {
-            storeFile file(keystore)
-            storePassword keystorePassword
-            keyAlias keyAlias
-            keyPassword keyPassword
-        }
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
 
     buildTypes {
         release {
-            signingConfig signingConfigs.release
             minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    buildFeatures {
+        viewBinding true
     }
 
     compileOptions {
@@ -42,5 +38,9 @@ android {
 }
 
 dependencies {
-    api deps.materialComponents
+    implementation project(':xml-theme')
+
+    implementation deps.appCompat
+    implementation deps.constraintLayout
+    implementation deps.coreKtx
 }
