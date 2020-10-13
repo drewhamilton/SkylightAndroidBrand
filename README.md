@@ -12,7 +12,7 @@ may undergo breaking changes before version 1.0.0.
 
 ```groovy
 // Android XML theme:
-implementation "drewhamilton.skylight.android.brand:skylight-brand-classic:$version"
+implementation "drewhamilton.skylight.android.brand:skylight-brand-xml-theme:$version"
 ```
 
 ## License
