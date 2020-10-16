@@ -6,6 +6,21 @@
   <style name="Theme.Skylight.Dark" parent="Base.V21.Theme.Skylight.Dark" />
   <style name="Theme.Skylight.Light" parent="Base.V21.Theme.Skylight.Light" />
 
+  <style name="Theme.Skylight.Fullscreen" parent="Theme.Skylight.Light.Fullscreen" />
+
+  <style name="Theme.Skylight.Dark.Fullscreen">
+    <item name="android:statusBarColor">#00000000</item>
+    <item name="android:navigationBarColor">#00000000</item>
+    <item name="android:windowTranslucentStatus">false</item>
+    <item name="android:windowTranslucentNavigation">false</item>
+  </style>
+  <style name="Theme.Skylight.Light.Fullscreen">
+    <item name="android:statusBarColor">#00ffffff</item>
+    <item name="android:navigationBarColor">#00ffffff</item>
+    <item name="android:windowTranslucentStatus">false</item>
+    <item name="android:windowTranslucentNavigation">false</item>
+  </style>
+
   <!--region Base-->
   <style name="Base.V21.Theme.Skylight.Dark" parent="Theme.MaterialComponents.NoActionBar">
     <!--Color attributes -->
@@ -21,16 +36,19 @@
     <item name="colorOnBackground">#ffffff</item>
 
     <item name="colorSurface">@color/skylight_darkPurple</item>
-    <item name="colorSurfaceVariant">@color/skylight_darkPurple_dark</item>
     <item name="colorOnSurface">#ffffff</item>
 
     <item name="colorError">@color/skylight_pink_light</item>
     <item name="colorOnError">#000000</item>
 
-    <item name="android:statusBarColor">@color/skylight_systemStatusBar_dark</item>
-    <item name="android:navigationBarColor">@color/skylight_systemNavigationBar_dark</item>
+    <item name="preferredStatusBarColor">@color/skylight_statusBar_dark</item>
+    <item name="preferredNavigationBarColor">@color/skylight_navigationBar_dark</item>
 
     <!--region Duplicated in dark and light themes-->
+    <!--System bars-->
+    <item name="android:statusBarColor">?preferredStatusBarColor</item>
+    <item name="android:navigationBarColor">?preferredNavigationBarColor</item>
+
     <!--Shape attributes-->
     <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Skylight.SmallComponent</item>
     <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Skylight.MediumComponent</item>
@@ -56,16 +74,19 @@
     <item name="colorOnBackground">#000000</item>
 
     <item name="colorSurface">@color/skylight_amber_light</item>
-    <item name="colorSurfaceVariant">@color/skylight_amber</item>
     <item name="colorOnSurface">#000000</item>
 
     <item name="colorError">@color/skylight_pink_dark</item>
     <item name="colorOnError">#ffffff</item>
 
-    <item name="android:statusBarColor">@color/skylight_systemStatusBar_light</item>
-    <item name="android:navigationBarColor">@color/skylight_systemNavigationBar_light</item>
+    <item name="preferredStatusBarColor">@color/skylight_statusBar_light</item>
+    <item name="preferredNavigationBarColor">@color/skylight_navigationBar_light</item>
 
     <!--region Duplicated in dark and light themes-->
+    <!--System bars-->
+    <item name="android:statusBarColor">?preferredStatusBarColor</item>
+    <item name="android:navigationBarColor">?preferredNavigationBarColor</item>
+
     <!--Shape attributes-->
     <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Skylight.SmallComponent</item>
     <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Skylight.MediumComponent</item>

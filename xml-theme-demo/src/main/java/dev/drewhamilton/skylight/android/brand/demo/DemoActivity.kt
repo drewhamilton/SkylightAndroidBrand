@@ -1,17 +1,20 @@
 package dev.drewhamilton.skylight.android.brand.demo
 
-import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
+import androidx.viewbinding.ViewBinding
+import com.backbase.deferredresources.DeferredColor
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import dev.drewhamilton.skylight.android.brand.demo.databinding.BottomSheetBinding
 import dev.drewhamilton.skylight.android.brand.demo.databinding.DemoBinding
 
@@ -21,6 +24,7 @@ class DemoActivity : AppCompatActivity() {
         DemoBinding.inflate(layoutInflater)
     }
 
+    private var isErrorSnackbarShowing: Boolean = false
     private var isBottomSheetShowing: Boolean = false
     private var isAlertDialogShowing: Boolean = false
 
@@ -28,18 +32,18 @@ class DemoActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
         }
-        if (Build.VERSION.SDK_INT >= 29) {
-            WindowCompat.setDecorFitsSystemWindows(window, false)
-        }
+        WindowCompat.setDecorFitsSystemWindows(window, false)
 
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, windowInsets ->
             with(windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())) {
-                binding.toolbar.updatePadding(top = top)
-                binding.scrollView.updatePadding(bottom = bottom)
+                binding.statusBarBackdrop.setHeight(top)
+                binding.navigationBarBackrop.setHeight(bottom)
                 binding.root.updatePadding(left = left, right = right)
+
+                binding.scrollView.updatePadding(bottom = bottom)
             }
 
             windowInsets
@@ -56,26 +60,18 @@ class DemoActivity : AppCompatActivity() {
         }
 
         binding.buttonsSwitch.setOnCheckedChangeListener { _, isChecked ->
-            binding.errorBannerButton.isEnabled = isChecked
+            binding.errorSnackbarButton.isEnabled = isChecked
             binding.bottomSheetButton.isEnabled = isChecked
             binding.alertDialogButton.isEnabled = isChecked
         }
 
-        binding.root.addTransitionListener(ErrorBannerTransitionListener(binding.errorBanner))
-        binding.errorBanner.setPrimaryButtonOnClickListener {
-            afterDelay { binding.root.transitionToEnd() }
-            binding.root.transitionToStart()
-        }
-        binding.errorBanner.setSecondaryButtonOnClickListener { binding.root.transitionToStart() }
-        binding.errorBanner.isEnabled = false
-
-        binding.errorBannerButton.setOnClickListener { binding.root.transitionToEnd() }
+        binding.errorSnackbarButton.setOnClickListener { binding.showErrorSnackbar() }
         binding.bottomSheetButton.setOnClickListener { showBottomSheet() }
         binding.alertDialogButton.setOnClickListener { showAlertDialog() }
 
         if (savedInstanceState != null) {
             val showError = savedInstanceState.getBoolean(KEY_IS_ERROR_SHOWING, false)
-            if (showError) binding.root.transitionToEnd()
+            if (showError) binding.showErrorSnackbar()
 
             val showBottomSheet = savedInstanceState.getBoolean(KEY_IS_BOTTOM_SHEET_SHOWING, false)
             if (showBottomSheet) showBottomSheet()
@@ -87,9 +83,29 @@ class DemoActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putBoolean(KEY_IS_ERROR_SHOWING, binding.root.currentState == binding.root.endState)
+        outState.putBoolean(KEY_IS_ERROR_SHOWING, isErrorSnackbarShowing)
         outState.putBoolean(KEY_IS_BOTTOM_SHEET_SHOWING, isBottomSheetShowing)
         outState.putBoolean(KEY_IS_ALERT_DIALOG_SHOWING, isAlertDialogShowing)
+    }
+
+    private fun ViewBinding.showErrorSnackbar() {
+        isErrorSnackbarShowing = true
+        val snackbar = Snackbar.make(root, "This is a serious error", Snackbar.LENGTH_INDEFINITE)
+        with(snackbar) {
+            val colorError = DeferredColor.Attribute(R.attr.colorError).resolve(context)
+            val textOnError = DeferredColor.Resource(R.color.button_text_on_error).resolveToStateList(context)
+            val rippleOnError = DeferredColor.Resource(R.color.ripple_on_error).resolveToStateList(context)
+
+            setBackgroundTint(colorError)
+            setTextColor(textOnError)
+            setActionTextColor(textOnError)
+            view.findViewById<MaterialButton>(R.id.snackbar_action).rippleColor = rippleOnError
+            setAction("Dismiss") {
+                isErrorSnackbarShowing = false
+                snackbar.dismiss()
+            }
+            show()
+        }
     }
 
     private fun showBottomSheet() = BottomSheetDialog(this).apply {
@@ -120,26 +136,10 @@ class DemoActivity : AppCompatActivity() {
         }.start()
     }
 
-    private class ErrorBannerTransitionListener(
-        private val errorBanner: Banner
-    ) : MotionLayout.TransitionListener {
-        override fun onTransitionStarted(motionLayout: MotionLayout, startId: Int, endId: Int) = Unit
-
-        override fun onTransitionChange(
-            motionLayout: MotionLayout,
-            startId: Int, endId: Int,
-            progress: Float
-        ) = Unit
-
-        override fun onTransitionCompleted(motionLayout: MotionLayout, currentId: Int) {
-            errorBanner.isEnabled = currentId == R.id.errorBannerShowing
+    private fun View.setHeight(height: Int) {
+        layoutParams = layoutParams.apply {
+            this.height = height
         }
-
-        override fun onTransitionTrigger(
-            motionLayout: MotionLayout,
-            triggerId: Int,
-            positive: Boolean, progress: Float
-        ) = Unit
     }
 
     private companion object {

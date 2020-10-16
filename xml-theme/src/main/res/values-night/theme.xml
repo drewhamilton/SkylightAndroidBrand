@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <style name="Theme.Skylight" parent="Theme.Skylight.Dark" />
+
+  <style name="Theme.Skylight.Fullscreen" parent="Theme.Skylight.Dark.Fullscreen" />
 </resources>
