@@ -70,6 +70,16 @@
           android:textAppearance="?textAppearanceSubtitle1" />
 
       <com.google.android.material.switchmaterial.SwitchMaterial
+          android:id="@+id/fullscreenSwitch"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:checked="true"
+          android:padding="@dimen/marginHorizontal_mainText"
+          android:text="Fullscreen"
+          android:textAppearance="?textAppearanceSubtitle1" />
+
+      <com.google.android.material.switchmaterial.SwitchMaterial
           android:id="@+id/buttonsSwitch"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"

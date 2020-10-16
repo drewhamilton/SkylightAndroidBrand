@@ -1,5 +1,6 @@
 package dev.drewhamilton.skylight.android.brand.demo
 
+import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
@@ -24,6 +25,8 @@ class DemoActivity : AppCompatActivity() {
         DemoBinding.inflate(layoutInflater)
     }
 
+    private var isFullscreen: Boolean = true
+
     private var isErrorSnackbarShowing: Boolean = false
     private var isBottomSheetShowing: Boolean = false
     private var isAlertDialogShowing: Boolean = false
@@ -32,7 +35,9 @@ class DemoActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
         }
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+        val defaultFullscreen = Build.VERSION.SDK_INT >= 29
+        setFullscreen(savedInstanceState?.getBoolean(KEY_IS_FULLSCREEN) ?: defaultFullscreen)
+        WindowCompat.setDecorFitsSystemWindows(window, !isFullscreen)
 
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -56,6 +61,14 @@ class DemoActivity : AppCompatActivity() {
                 AppCompatDelegate.setDefaultNightMode(
                     if (isChecked) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
                 )
+            }
+        }
+
+        binding.fullscreenSwitch.isChecked = isFullscreen
+        binding.fullscreenSwitch.setOnCheckedChangeListener { _, isChecked ->
+            afterDelay {
+                setFullscreen(isChecked)
+                recreate()
             }
         }
 
@@ -83,9 +96,16 @@ class DemoActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
+        outState.putBoolean(KEY_IS_FULLSCREEN, isFullscreen)
         outState.putBoolean(KEY_IS_ERROR_SHOWING, isErrorSnackbarShowing)
         outState.putBoolean(KEY_IS_BOTTOM_SHEET_SHOWING, isBottomSheetShowing)
         outState.putBoolean(KEY_IS_ALERT_DIALOG_SHOWING, isAlertDialogShowing)
+    }
+
+    private fun setFullscreen(fullscreen: Boolean) {
+        isFullscreen = fullscreen
+        val theme = if (fullscreen) R.style.Theme_Skylight_Fullscreen else R.style.Theme_Skylight
+        setTheme(theme)
     }
 
     private fun ViewBinding.showErrorSnackbar() {
@@ -143,6 +163,7 @@ class DemoActivity : AppCompatActivity() {
     }
 
     private companion object {
+        private const val KEY_IS_FULLSCREEN = "is_fullscreen"
         private const val KEY_IS_ERROR_SHOWING = "is_error_showing"
         private const val KEY_IS_BOTTOM_SHEET_SHOWING = "is_bottom_sheet_showing"
         private const val KEY_IS_ALERT_DIALOG_SHOWING = "is_alert_dialog_showing"
