@@ -12,6 +12,8 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import androidx.viewbinding.ViewBinding
 import com.backbase.deferredresources.DeferredColor
+import com.backbase.deferredresources.color.SdkIntDeferredColor
+import com.backbase.deferredresources.color.withAlpha
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -113,8 +115,15 @@ class DemoActivity : AppCompatActivity() {
         val snackbar = Snackbar.make(root, "This is a serious error", Snackbar.LENGTH_INDEFINITE)
         with(snackbar) {
             val colorError = DeferredColor.Attribute(R.attr.colorError).resolve(context)
-            val textOnError = DeferredColor.Resource(R.color.button_text_on_error).resolveToStateList(context)
-            val rippleOnError = DeferredColor.Resource(R.color.ripple_on_error).resolveToStateList(context)
+            val colorOnError = DeferredColor.Attribute(R.attr.colorOnError)
+            val textOnError = SdkIntDeferredColor(
+                minSdk = colorOnError,
+                sdk23 = DeferredColor.Resource(R.color.button_text_on_error),
+            ).resolveToStateList(context)
+            val rippleOnError = SdkIntDeferredColor(
+                minSdk = colorOnError.withAlpha(0.12f),
+                sdk23 = DeferredColor.Resource(R.color.ripple_on_error),
+            ).resolveToStateList(context)
 
             setBackgroundTint(colorError)
             setTextColor(textOnError)
