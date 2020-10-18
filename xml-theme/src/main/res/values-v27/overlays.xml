@@ -6,6 +6,7 @@
   <style name="Base.V27.ThemeOverlay.Skylight.Light.BottomSheetDialog" parent="Base.V21.ThemeOverlay.Skylight.Light.BottomSheetDialog">
     <item name="android:navigationBarColor">?colorSurface</item>
     <item name="android:navigationBarDividerColor">@null</item>
+    <item name="android:windowLightNavigationBar">true</item>
   </style>
 
 </resources>
