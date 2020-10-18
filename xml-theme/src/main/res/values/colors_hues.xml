@@ -2,7 +2,7 @@
 <resources>
 
   <!-- Amber -->
-  <color name="skylight_amber_extraLight">#ffecb3</color>
+  <color name="skylight_amber_extraLight">#ffe997</color>
   <color name="skylight_amber_light">#ffd54f</color>
   <color name="skylight_amber">#ffc107</color>
   <color name="skylight_amber_dark">#ffa000</color>
