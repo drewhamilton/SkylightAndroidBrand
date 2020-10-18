@@ -47,6 +47,7 @@
     <!--region Duplicated in dark and light themes-->
     <!--Component styles-->
     <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Surface</item>
+    <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Skylight.Dark.BottomSheetDialog</item>
 
     <!--System bars-->
     <item name="android:statusBarColor">?preferredStatusBarColor</item>
@@ -88,6 +89,7 @@
     <!--region Duplicated in dark and light themes-->
     <!--Component styles-->
     <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Surface</item>
+    <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Skylight.Light.BottomSheetDialog</item>
 
     <!--System bars-->
     <item name="android:statusBarColor">?preferredStatusBarColor</item>
