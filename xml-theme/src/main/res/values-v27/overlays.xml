@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <style name="ThemeOverlay.Skylight.Light.BottomSheetDialog" parent="Base.V27.ThemeOverlay.Skylight.Light.BottomSheetDialog" />
+
+  <style name="Base.V27.ThemeOverlay.Skylight.Light.BottomSheetDialog" parent="Base.V21.ThemeOverlay.Skylight.Light.BottomSheetDialog">
+    <item name="android:navigationBarColor">?colorSurface</item>
+    <item name="android:navigationBarDividerColor">@null</item>
+  </style>
+
+</resources>

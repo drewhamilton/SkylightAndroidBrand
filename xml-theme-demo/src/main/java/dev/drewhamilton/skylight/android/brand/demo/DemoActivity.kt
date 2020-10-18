@@ -27,6 +27,10 @@ class DemoActivity : AppCompatActivity() {
         DemoBinding.inflate(layoutInflater)
     }
 
+    private val scrollingToolbarElevation by lazy(mode = LazyThreadSafetyMode.NONE) {
+        resources.getDimension(R.dimen.toolbarElevation)
+    }
+
     private var isFullscreen: Boolean = true
 
     private var isErrorSnackbarShowing: Boolean = false
@@ -54,6 +58,11 @@ class DemoActivity : AppCompatActivity() {
             }
 
             windowInsets
+        }
+
+        binding.setToolbarElevation()
+        binding.scrollView.viewTreeObserver.addOnScrollChangedListener {
+            binding.setToolbarElevation()
         }
 
         binding.darkModeSwitch.isChecked = resources.getBoolean(R.bool.nightMode)
@@ -108,6 +117,12 @@ class DemoActivity : AppCompatActivity() {
         isFullscreen = fullscreen
         val theme = if (fullscreen) R.style.Theme_Skylight_Fullscreen else R.style.Theme_Skylight
         setTheme(theme)
+    }
+
+    private fun DemoBinding.setToolbarElevation() {
+        val scrolledStateRatio = (scrollView.scrollY.toFloat() / scrollView.paddingTop).coerceIn(0f, 1f)
+        statusBarBackdrop.elevation = scrolledStateRatio * scrollingToolbarElevation
+        toolbar.elevation = scrolledStateRatio * scrollingToolbarElevation
     }
 
     private fun ViewBinding.showErrorSnackbar() {
