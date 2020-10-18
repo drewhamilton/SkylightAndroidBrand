@@ -15,6 +15,18 @@ may undergo breaking changes before version 1.0.0.
 implementation "drewhamilton.skylight.android.brand:skylight-brand-xml-theme:$version"
 ```
 
+## Use
+Set your app theme to `Theme.Skylight` in your AndroidManifest, and use material components throughout the app for a
+fully Skylight-branded application.
+
+```xml
+<application
+  android:theme="@style/Theme.Skylight" />
+```
+
+If you're creating a full-screen app and handling system window insets, use `Theme.Skylight.Fullscreen` along with the
+`?preferredStatusBarColor` and `?preferredNavigationBarColor` attributes where appropriate as system inset backdrops.
+
 ## License
 ```
 Copyright 2020 Drew Hamilton
