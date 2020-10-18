@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,72 +8,37 @@
     android:layout_height="match_parent"
 
     android:background="?android:colorBackground"
-    android:orientation="vertical"
-
-    app:layoutDescription="@xml/display_banner_motion"
 
     tools:ignore="HardcodedText">
 
-  <FrameLayout
-      android:id="@+id/toolbar"
+  <View
+      android:id="@+id/statusBarBackdrop"
       android:layout_width="0dp"
-      android:layout_height="wrap_content"
+      android:layout_height="0dp"
 
-      android:background="?colorSurfaceVariant"
+      android:background="?preferredStatusBarColor"
       android:elevation="4dp"
 
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
 
-      tools:paddingTop="24dp">
+      tools:layout_height="24dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:background="?colorSurface"
-        android:padding="16dp"
-        android:text="@string/app_name"
-        android:textAppearance="?textAppearanceHeadline6"
-        android:textColor="?colorOnSurface"
-
-        app:title="@string/app_name"
-        app:titleTextColor="?colorOnSurface" />
-
-  </FrameLayout>
-
-  <dev.drewhamilton.skylight.android.brand.demo.Banner
-      android:id="@+id/errorBanner"
-      style="@style/Widget.SkylightDemo.Banner.Error"
-      android:layout_width="0dp"
-
+  <com.google.android.material.appbar.MaterialToolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      app:bannerMessage="This is an example error banner."
-      app:bannerPrimaryButtonText="Try again"
 
-      app:bannerSecondaryButtonText="Dismiss" />
+      android:background="?colorSurface"
+      android:elevation="4dp"
 
-  <Space
-      android:id="@+id/errorBannerSpace"
-      android:layout_width="0dp"
-      android:layout_height="1dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/statusBarBackdrop"
 
-      app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-      app:layout_constraintEnd_toEndOf="@+id/errorBanner"
-      app:layout_constraintStart_toStartOf="@+id/errorBanner" />
-
-  <View
-      android:id="@+id/errorBannerDivider"
-      android:layout_width="0dp"
-      android:layout_height="1dp"
-
-      android:alpha="0.12"
-      android:background="?colorOnBackground"
-
-      app:layout_constraintEnd_toEndOf="@+id/errorBanner"
-      app:layout_constraintStart_toStartOf="@+id/errorBanner"
-      app:layout_constraintTop_toBottomOf="@+id/errorBanner" />
+      app:title="@string/app_name"
+      app:titleTextColor="?colorOnSurface" />
 
   <ScrollView
       android:id="@+id/scrollView"
@@ -85,7 +50,7 @@
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/errorBanner">
+      app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -105,6 +70,16 @@
           android:textAppearance="?textAppearanceSubtitle1" />
 
       <com.google.android.material.switchmaterial.SwitchMaterial
+          android:id="@+id/fullscreenSwitch"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:checked="true"
+          android:padding="@dimen/marginHorizontal_mainText"
+          android:text="Fullscreen"
+          android:textAppearance="?textAppearanceSubtitle1" />
+
+      <com.google.android.material.switchmaterial.SwitchMaterial
           android:id="@+id/buttonsSwitch"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
@@ -115,13 +90,13 @@
           android:textAppearance="?textAppearanceSubtitle1" />
 
       <com.google.android.material.button.MaterialButton
-          android:id="@+id/errorBannerButton"
+          android:id="@+id/errorSnackbarButton"
           style="@style/Widget.MaterialComponents.Button.TextButton"
           android:layout_width="wrap_content"
 
           android:layout_height="wrap_content"
 
-          android:text="Error banner" />
+          android:text="Error snackbar" />
 
       <com.google.android.material.button.MaterialButton
           android:id="@+id/bottomSheetButton"
@@ -156,10 +131,16 @@
   <View
       android:id="@+id/navigationBarBackrop"
       android:layout_width="0dp"
-      android:layout_height="44dp"
+      android:layout_height="0dp"
+
+      android:alpha="0.75"
+      android:background="?preferredNavigationBarColor"
+      android:elevation="1000dp"
 
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintBottom_toBottomOf="parent"/>
+      app:layout_constraintBottom_toBottomOf="parent"
 
-</androidx.constraintlayout.motion.widget.MotionLayout>
+      tools:layout_height="56dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
