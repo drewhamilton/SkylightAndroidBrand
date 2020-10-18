@@ -45,6 +45,9 @@
     <item name="preferredNavigationBarColor">@color/skylight_navigationBar_dark</item>
 
     <!--region Duplicated in dark and light themes-->
+    <!--Component styles-->
+    <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Surface</item>
+
     <!--System bars-->
     <item name="android:statusBarColor">?preferredStatusBarColor</item>
     <item name="android:navigationBarColor">?preferredNavigationBarColor</item>
@@ -83,6 +86,9 @@
     <item name="preferredNavigationBarColor">@color/skylight_navigationBar_light</item>
 
     <!--region Duplicated in dark and light themes-->
+    <!--Component styles-->
+    <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Surface</item>
+
     <!--System bars-->
     <item name="android:statusBarColor">?preferredStatusBarColor</item>
     <item name="android:navigationBarColor">?preferredNavigationBarColor</item>
