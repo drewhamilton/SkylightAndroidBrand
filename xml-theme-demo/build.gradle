@@ -44,6 +44,6 @@ dependencies {
     implementation deps.constraintLayout
     implementation deps.coreKtx
     implementation(deps.deferredResources) {
-        changing = versions.deferredResources.contains('SNAPSHOT')
+        changing = deps.deferredResources.contains('SNAPSHOT')
     }
 }

@@ -1,13 +1,12 @@
 buildscript {
     ext.versions = [
-        deferredResources: '1.1.0-SNAPSHOT',
         kotlin: '1.4.10',
     ]
     ext.deps = [
         appCompat: 'androidx.appcompat:appcompat:1.2.0',
         constraintLayout: 'androidx.constraintlayout:constraintlayout:2.0.1',
         coreKtx: 'androidx.core:core-ktx:1.5.0-alpha04',
-        deferredResources: "com.backbase.oss.deferredresources:deferred-resources:$versions.deferredResources",
+        deferredResources: 'com.backbase.oss.deferredresources:deferred-resources:1.1.0-SNAPSHOT',
         espresso: 'androidx.test.espresso:espresso-intents:3.3.0',
         junit: 'junit:junit:4.13',
         junitExt: 'androidx.test.ext:junit:1.1.2',
