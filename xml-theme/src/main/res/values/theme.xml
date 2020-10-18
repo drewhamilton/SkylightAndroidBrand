@@ -44,10 +44,11 @@
     <item name="preferredStatusBarColor">@color/skylight_statusBar_dark</item>
     <item name="preferredNavigationBarColor">@color/skylight_navigationBar_dark</item>
 
+    <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Skylight.Dark.BottomSheetDialog</item>
+
     <!--region Duplicated in dark and light themes-->
     <!--Component styles-->
     <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Surface</item>
-    <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Skylight.Dark.BottomSheetDialog</item>
 
     <!--System bars-->
     <item name="android:statusBarColor">?preferredStatusBarColor</item>
@@ -86,10 +87,11 @@
     <item name="preferredStatusBarColor">@color/skylight_statusBar_light</item>
     <item name="preferredNavigationBarColor">@color/skylight_navigationBar_light</item>
 
+    <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Skylight.Light.BottomSheetDialog</item>
+
     <!--region Duplicated in dark and light themes-->
     <!--Component styles-->
     <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Surface</item>
-    <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Skylight.Light.BottomSheetDialog</item>
 
     <!--System bars-->
     <item name="android:statusBarColor">?preferredStatusBarColor</item>
