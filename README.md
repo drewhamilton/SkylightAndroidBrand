@@ -7,8 +7,8 @@ Comprises branding and theming used for [Skylight](https://github.com/drewhamilt
 ## Download
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/dev.drewhamilton.skylight.android.brand/skylight-brand-xml-theme/badge.svg)](https://maven-badges.herokuapp.com/maven-central/dev.drewhamilton.skylight.android.brand/skylight-brand-xml-theme)
 
-Skylight Android will be available in Maven Central. Not yet tho. It is still in pre-release development, and the API
-may undergo breaking changes before version 1.0.0.
+Skylight Android is available on Maven Central. It is still in pre-release development, and the API may undergo breaking
+changes before version 1.0.0.
 
 ```groovy
 // Android XML theme:
@@ -24,7 +24,7 @@ fully Skylight-branded application.
   android:theme="@style/Theme.Skylight" />
 ```
 
-If you're creating a full-screen app and handling system window insets, use `Theme.Skylight.Fullscreen` along with the
+If you're creating a full-screen app and handling system window insets, use `Theme.Skylight.Fullscreen`, along with the
 `?preferredStatusBarColor` and `?preferredNavigationBarColor` attributes where appropriate as system inset backdrops.
 
 ## License
