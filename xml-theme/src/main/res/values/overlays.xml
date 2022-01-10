@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
   <style name="ThemeOverlay.Skylight.Dark.BottomSheetDialog" parent="Base.V21.ThemeOverlay.Skylight.Dark.BottomSheetDialog" />
   <style name="ThemeOverlay.Skylight.Light.BottomSheetDialog" parent="Base.V21.ThemeOverlay.Skylight.Light.BottomSheetDialog" />
@@ -9,7 +9,7 @@
     <item name="android:navigationBarColor">?colorSurface</item>
   </style>
 
-  <style name="Base.V21.ThemeOverlay.Skylight.Light.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.Light.BottomSheetDialog">
+  <style name="Base.V21.ThemeOverlay.Skylight.Light.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
     <item name="android:windowIsFloating">false</item>
     <item name="android:navigationBarColor">?preferredNavigationBarColor</item>
   </style>
