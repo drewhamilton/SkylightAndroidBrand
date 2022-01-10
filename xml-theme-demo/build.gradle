@@ -4,8 +4,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion projectVersions.targetSdk
-    buildToolsVersion '30.0.2'
+    compileSdkVersion projectVersions.compileSdk
 
     defaultConfig {
         applicationId 'dev.drewhamilton.skylight.android.brand.demo'

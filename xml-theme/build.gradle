@@ -10,8 +10,7 @@ ext {
 apply from: '../publish.gradle'
 
 android {
-    compileSdkVersion projectVersions.targetSdk
-    buildToolsVersion '30.0.2'
+    compileSdkVersion projectVersions.compileSdk
 
     defaultConfig {
         minSdkVersion projectVersions.minSdk
