@@ -4,8 +4,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion projectVersions.targetSdk
-    buildToolsVersion '30.0.2'
+    compileSdkVersion projectVersions.compileSdk
 
     defaultConfig {
         applicationId 'dev.drewhamilton.skylight.android.brand.demo'
@@ -40,10 +39,10 @@ android {
 dependencies {
     implementation project(':xml-theme')
 
-    implementation deps.appCompat
-    implementation deps.constraintLayout
-    implementation deps.coreKtx
-    implementation(deps.deferredResources) {
-        changing = deps.deferredResources.contains('SNAPSHOT')
+    implementation(libs.androidx.appCompat)
+    implementation(libs.androidx.constraintLayout)
+    implementation(libs.androidx.coreKtx)
+    implementation(libs.deferredResources) {
+        changing = "$libs.deferredResources".contains("SNAPSHOT")
     }
 }
