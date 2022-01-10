@@ -18,12 +18,11 @@ buildscript {
         google()
         mavenCentral()
         gradlePluginPortal()
-        jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.0.2"
+        classpath "com.android.tools.build:gradle:7.0.4"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
-        classpath 'org.jetbrains.kotlinx:binary-compatibility-validator:0.8.0'
+        classpath "org.jetbrains.kotlinx:binary-compatibility-validator:0.8.0"
     }
 }
 
@@ -50,7 +49,6 @@ allprojects { project ->
         google()
         mavenCentral()
         gradlePluginPortal()
-        jcenter()
         maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
     }
 
