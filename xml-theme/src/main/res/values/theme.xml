@@ -26,11 +26,9 @@
   <style name="Base.V21.Theme.Skylight.Dark" parent="Theme.MaterialComponents.NoActionBar">
     <!--Color attributes -->
     <item name="colorPrimary">@color/skylight_amber_dark</item>
-    <item name="colorPrimaryVariant">?colorPrimary</item>
     <item name="colorOnPrimary">#000000</item>
 
     <item name="colorSecondary">?colorPrimary</item>
-    <item name="colorSecondaryVariant">?colorPrimaryVariant</item>
     <item name="colorOnSecondary">?colorOnPrimary</item>
 
     <item name="android:colorBackground">@color/skylight_darkPurple_dark</item>
@@ -48,6 +46,9 @@
     <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Skylight.Dark.BottomSheetDialog</item>
 
     <!--region Duplicated in dark and light themes-->
+    <item name="colorPrimaryVariant">?colorPrimary</item>
+    <item name="colorSecondaryVariant">?colorSecondary</item>
+
     <!--Component styles-->
     <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Surface</item>
 
@@ -69,11 +70,9 @@
   <style name="Base.V21.Theme.Skylight.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
     <!--Color attributes -->
     <item name="colorPrimary">@color/skylight_deepRed_dark</item>
-    <item name="colorPrimaryVariant">?colorPrimary</item>
     <item name="colorOnPrimary">#ffffff</item>
 
     <item name="colorSecondary">?colorPrimary</item>
-    <item name="colorSecondaryVariant">?colorSecondary</item>
     <item name="colorOnSecondary">?colorOnPrimary</item>
 
     <item name="android:colorBackground">@color/skylight_amber_extraLight</item>
@@ -91,6 +90,9 @@
     <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Skylight.Light.BottomSheetDialog</item>
 
     <!--region Duplicated in dark and light themes-->
+    <item name="colorPrimaryVariant">?colorPrimary</item>
+    <item name="colorSecondaryVariant">?colorSecondary</item>
+
     <!--Component styles-->
     <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Surface</item>
 
