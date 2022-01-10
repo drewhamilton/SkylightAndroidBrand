@@ -17,6 +17,7 @@
   <style name="Theme.Skylight.Light.Fullscreen">
     <item name="android:statusBarColor">#00ffffff</item>
     <item name="android:navigationBarColor">#00ffffff</item>
+    <item name="android:navigationBarDividerColor" tools:targetApi="27">@null</item>
     <item name="android:windowTranslucentStatus">false</item>
     <item name="android:windowTranslucentNavigation">false</item>
   </style>
@@ -25,7 +26,7 @@
   <style name="Base.V21.Theme.Skylight.Dark" parent="Theme.MaterialComponents.NoActionBar">
     <!--Color attributes -->
     <item name="colorPrimary">@color/skylight_amber_dark</item>
-    <item name="colorPrimaryVariant">@color/skylight_amber</item>
+    <item name="colorPrimaryVariant">?colorPrimary</item>
     <item name="colorOnPrimary">#000000</item>
 
     <item name="colorSecondary">?colorPrimary</item>
@@ -41,8 +42,8 @@
     <item name="colorError">@color/skylight_pink_light</item>
     <item name="colorOnError">#000000</item>
 
-    <item name="preferredStatusBarColor">@color/skylight_statusBar_dark</item>
-    <item name="preferredNavigationBarColor">@color/skylight_navigationBar_dark</item>
+    <item name="preferredStatusBarColor">?colorSurface</item>
+    <item name="preferredNavigationBarColor">?android:colorBackground</item>
 
     <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Skylight.Dark.BottomSheetDialog</item>
 
@@ -68,11 +69,11 @@
   <style name="Base.V21.Theme.Skylight.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
     <!--Color attributes -->
     <item name="colorPrimary">@color/skylight_deepRed_dark</item>
-    <item name="colorPrimaryVariant">@color/skylight_deepRed_extraDark</item>
+    <item name="colorPrimaryVariant">?colorPrimary</item>
     <item name="colorOnPrimary">#ffffff</item>
 
     <item name="colorSecondary">?colorPrimary</item>
-    <item name="colorSecondaryVariant">?colorPrimaryVariant</item>
+    <item name="colorSecondaryVariant">?colorSecondary</item>
     <item name="colorOnSecondary">?colorOnPrimary</item>
 
     <item name="android:colorBackground">@color/skylight_amber_extraLight</item>
@@ -84,8 +85,8 @@
     <item name="colorError">@color/skylight_pink_dark</item>
     <item name="colorOnError">#ffffff</item>
 
-    <item name="preferredStatusBarColor">@color/skylight_statusBar_light</item>
-    <item name="preferredNavigationBarColor">@color/skylight_navigationBar_light</item>
+    <item name="preferredStatusBarColor">@color/skylight_darkPurple_extraDark</item>
+    <item name="preferredNavigationBarColor">@color/skylight_darkPurple_extraDark</item>
 
     <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Skylight.Light.BottomSheetDialog</item>
 
