@@ -47,5 +47,5 @@ android {
 }
 
 dependencies {
-    api deps.materialComponents
+    api libs.materialComponents
 }

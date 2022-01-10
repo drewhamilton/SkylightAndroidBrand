@@ -1,0 +1,21 @@
+[libraries]
+
+android-gradle = "com.android.tools.build:gradle:7.0.4"
+
+androidx-appCompat = "androidx.appcompat:appcompat:1.4.0"
+androidx-constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.1"
+androidx-coreKtx = "androidx.core:core-ktx:1.7.0"
+androidx-espresso = "androidx.test.espresso:espresso-intents:3.3.0"
+androidx-junitExt = "androidx.test.ext:junit:1.1.2"
+androidx-testRules = "androidx.test:rules:1.3.0"
+androidx-testRunner = "androidx.test:runner:1.3.0"
+
+deferredResources = "com.backbase.oss.deferredresources:deferred-resources:1.6.0"
+
+junit = "junit:junit:4.13.2"
+
+kotlin-gradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+
+kotlinx-binaryCompatibilityValidator = "org.jetbrains.kotlinx:binary-compatibility-validator:0.8.0"
+
+materialComponents = "com.google.android.material:material:1.2.1"

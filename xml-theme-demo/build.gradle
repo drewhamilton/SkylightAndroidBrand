@@ -39,10 +39,10 @@ android {
 dependencies {
     implementation project(':xml-theme')
 
-    implementation deps.appCompat
-    implementation deps.constraintLayout
-    implementation deps.coreKtx
-    implementation(deps.deferredResources) {
-        changing = deps.deferredResources.contains('SNAPSHOT')
+    implementation(libs.androidx.appCompat)
+    implementation(libs.androidx.constraintLayout)
+    implementation(libs.androidx.coreKtx)
+    implementation(libs.deferredResources) {
+        changing = "$libs.deferredResources".contains("SNAPSHOT")
     }
 }
