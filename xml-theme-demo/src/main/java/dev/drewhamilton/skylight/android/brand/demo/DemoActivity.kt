@@ -16,6 +16,7 @@ import com.backbase.deferredresources.color.SdkIntDeferredColor
 import com.backbase.deferredresources.color.withAlpha
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.color.DynamicColors
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import dev.drewhamilton.skylight.android.brand.demo.databinding.BottomSheetBinding
@@ -109,6 +110,7 @@ class DemoActivity : AppCompatActivity() {
         isFullscreen = fullscreen
         val theme = if (fullscreen) R.style.Theme3_Skylight_Fullscreen else R.style.Theme3_Skylight
         setTheme(theme)
+        DynamicColors.applyIfAvailable(this)
     }
 
     private fun ViewBinding.showErrorSnackbar() {
