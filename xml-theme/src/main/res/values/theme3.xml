@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="Theme3.Skylight.Fullscreen" parent="Theme3.Skylight.Light.Fullscreen" />
+  <style name="Theme3.Skylight" parent="Theme3.Skylight.Light" />
+
+  <style name="Theme3.Skylight.Light.Fullscreen">
+    <item name="android:statusBarColor">#00ffffff</item>
+    <item name="android:navigationBarColor">#00ffffff</item>
+    <item name="android:windowTranslucentStatus">false</item>
+    <item name="android:windowTranslucentNavigation">false</item>
+  </style>
+  <style name="Theme3.Skylight.Dark.Fullscreen">
+    <item name="android:statusBarColor">#00000000</item>
+    <item name="android:navigationBarColor">#00000000</item>
+    <item name="android:windowTranslucentStatus">false</item>
+    <item name="android:windowTranslucentNavigation">false</item>
+  </style>
+
+  <style name="Theme3.Skylight.Light" parent="Base.V21.Theme3.Skylight.Light" />
+  <style name="Theme3.Skylight.Dark" parent="Base.V21.Theme3.Skylight.Dark" />
+
+  <style name="Base.V21.Theme3.Skylight.Light" parent="Theme.Material3.Light.NoActionBar">
+
+  </style>
+
+  <style name="Base.V21.Theme3.Skylight.Dark" parent="Theme.Material3.Dark.NoActionBar">
+
+  </style>
+
+</resources>
