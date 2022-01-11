@@ -46,10 +46,11 @@ class DemoActivity : AppCompatActivity() {
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, windowInsets ->
             with(windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())) {
-                binding.statusBarBackdrop.setHeight(top)
                 binding.appBarLayout.updatePadding(top = top)
                 binding.root.updatePadding(left = left, right = right)
                 binding.scrollView.updatePadding(bottom = bottom)
+
+                binding.statusBarBackdrop.setHeight(top)
                 binding.navigationBarBackrop.setHeight(bottom)
             }
 
