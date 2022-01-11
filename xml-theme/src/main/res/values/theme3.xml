@@ -25,7 +25,8 @@
   </style>
 
   <style name="Base.V21.Theme3.Skylight.Dark" parent="Theme.Material3.Dark.NoActionBar">
-
+    <item name="android:statusBarColor">?colorSurfaceVariant</item>
+    <item name="android:navigationBarColor">?colorSurfaceVariant</item>
   </style>
 
 </resources>

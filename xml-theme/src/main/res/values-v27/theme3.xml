@@ -4,6 +4,7 @@
   <style name="Theme3.Skylight.Light" parent="Base.V27.Theme3.Skylight.Light" />
 
   <style name="Base.V27.Theme3.Skylight.Light" parent="Base.V23.Theme3.Skylight.Light">
+    <item name="android:navigationBarColor">?colorSurfaceVariant</item>
     <item name="android:windowLightNavigationBar">true</item>
   </style>
 
