@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- Amber -->
+  <color name="skylight_amber_100">#ffffff</color>
+  <color name="skylight_amber_99">#fffbf0</color>
+  <color name="skylight_amber_95">#ffefc3</color>
+  <color name="skylight_amber_90">#ffe083</color>
+  <color name="skylight_amber_80">#ffba00</color>
+  <color name="skylight_amber_70">#ff8c00</color>
+  <color name="skylight_amber_60">#fd5800</color>
+  <color name="skylight_amber_50">#e81c00</color>
+  <color name="skylight_amber_40">#c10c00</color>
+  <color name="skylight_amber_30">#930600</color>
+  <color name="skylight_amber_20">#6a0300</color>
+  <color name="skylight_amber_10">#430000</color>
+  <color name="skylight_amber_0">#000000</color>
+
+</resources>

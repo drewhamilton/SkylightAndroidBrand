@@ -6,7 +6,7 @@
   <color name="skylight_amber_light">#ffd54f</color>
   <color name="skylight_amber">#ffc107</color>
   <color name="skylight_amber_dark">#ffa000</color>
-  <color name="skylight_amber_extraDark">#ff6f00</color>
+  <color name="skylight_amber_extraDark">#f66f00</color>
 
   <!-- Deep red -->
   <color name="skylight_deepRed_extraLight">#dd2100</color>
