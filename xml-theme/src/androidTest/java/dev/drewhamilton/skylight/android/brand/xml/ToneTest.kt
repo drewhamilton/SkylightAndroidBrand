@@ -65,7 +65,57 @@ class ToneTest {
     //endregion
 
     //region Skylight purple
+    @Test fun purple100() {
+        assertResourceTone(100, R.color.skylight_purple_100)
+    }
 
+    @Test fun purple99() {
+        assertResourceTone(99, R.color.skylight_purple_99)
+    }
+
+    @Test fun purple95() {
+        assertResourceTone(95, R.color.skylight_purple_95)
+    }
+
+    @Test fun purple90() {
+        assertResourceTone(90, R.color.skylight_purple_90)
+    }
+
+    @Test fun purple80() {
+        assertResourceTone(80, R.color.skylight_purple_80)
+    }
+
+    @Test fun purple70() {
+        assertResourceTone(70, R.color.skylight_purple_70)
+    }
+
+    @Test fun purple60() {
+        assertResourceTone(60, R.color.skylight_purple_60)
+    }
+
+    @Test fun purple50() {
+        assertResourceTone(50, R.color.skylight_purple_50)
+    }
+
+    @Test fun purple40() {
+        assertResourceTone(40, R.color.skylight_purple_40)
+    }
+
+    @Test fun purple30() {
+        assertResourceTone(30, R.color.skylight_purple_30)
+    }
+
+    @Test fun purple20() {
+        assertResourceTone(20, R.color.skylight_purple_20)
+    }
+
+    @Test fun purple10() {
+        assertResourceTone(10, R.color.skylight_purple_10)
+    }
+
+    @Test fun purple0() {
+        assertResourceTone(0, R.color.skylight_purple_0)
+    }
     //endregion
 
     //region ref palette primary

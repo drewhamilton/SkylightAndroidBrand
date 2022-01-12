@@ -16,4 +16,19 @@
   <color name="skylight_amber_10">#430000</color>
   <color name="skylight_amber_0">#000000</color>
 
+  <!-- Purple -->
+  <color name="skylight_purple_100">#ffffff</color>
+  <color name="skylight_purple_99">#fffbfc</color>
+  <color name="skylight_purple_95">#fcecf8</color>
+  <color name="skylight_purple_90">#f3ddf1</color>
+  <color name="skylight_purple_80">#e1bae0</color>
+  <color name="skylight_purple_70">#cb9dcd</color>
+  <color name="skylight_purple_60">#b081b2</color>
+  <color name="skylight_purple_50">#98689a</color>
+  <color name="skylight_purple_40">#7a517f</color>
+  <color name="skylight_purple_30">#63346c</color>
+  <color name="skylight_purple_20">#501659</color>
+  <color name="skylight_purple_10">#350045</color>
+  <color name="skylight_purple_0">#000000</color>
+
 </resources>
