@@ -122,7 +122,9 @@
 
             android:padding="16dp"
             android:text="@string/long_body_text"
-            android:textAppearance="?textAppearanceBody1" />
+            android:textAppearance="?textAppearanceBody1"
+            android:textIsSelectable="true"
+            />
 
       </LinearLayout>
 
