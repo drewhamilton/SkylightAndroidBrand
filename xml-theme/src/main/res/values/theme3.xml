@@ -43,12 +43,11 @@
 
     <item name="colorSurface">@color/skylight_amber_99</item>
     <item name="colorOnSurface">@color/skylight_amber_10</item>
-    <!--TODO: Create neutral variant palette-->
-<!--    <item name="colorSurfaceVariant">@color/skylight_amber_95</item>-->
-<!--    <item name="colorOnSurfaceVariant">@color/skylight_amber_30</item>-->
+    <item name="colorSurfaceVariant">@color/skylight_neutralRose_95</item>
+    <item name="colorOnSurfaceVariant">@color/skylight_neutralRose_30</item>
     <item name="colorSurfaceInverse">@color/skylight_amber_20</item>
     <item name="colorOnSurfaceInverse">@color/skylight_amber_95</item>
-<!--    <item name="colorOutline">@color/skylight_amber_50</item>-->
+    <item name="colorOutline">@color/skylight_neutralRose_50</item>
 
     <item name="colorError">@color/skylight_pink_40</item>
     <item name="colorOnError">@color/skylight_pink_100</item>
@@ -82,11 +81,11 @@
 
     <item name="colorSurface">@color/skylight_purple_10</item>
     <item name="colorOnSurface">@color/skylight_purple_90</item>
-<!--    <item name="colorSurfaceVariant">@color/m3_sys_color_dark_surface_variant</item>-->
-<!--    <item name="colorOnSurfaceVariant">@color/m3_sys_color_dark_on_surface_variant</item>-->
+    <item name="colorSurfaceVariant">@color/skylight_neutralPurple_30</item>
+    <item name="colorOnSurfaceVariant">@color/skylight_neutralPurple_80</item>
     <item name="colorSurfaceInverse">@color/skylight_purple_90</item>
     <item name="colorOnSurfaceInverse">@color/skylight_purple_20</item>
-<!--    <item name="colorOutline">@color/m3_sys_color_dark_outline</item>-->
+    <item name="colorOutline">@color/skylight_neutralPurple_60</item>
 
     <item name="colorError">@color/skylight_pink_80</item>
     <item name="colorOnError">@color/skylight_pink_20</item>
@@ -94,8 +93,8 @@
     <item name="colorOnErrorContainer">@color/skylight_pink_90</item>
     <!--endregion-->
 
-    <item name="android:statusBarColor">?colorSurfaceVariant</item>
-    <item name="android:navigationBarColor">?colorSurfaceVariant</item>
+    <item name="android:statusBarColor">?colorOnSurfaceInverse</item>
+    <item name="android:navigationBarColor">?colorOnSurfaceInverse</item>
 
     <item name="elevationOverlayColor">?colorTertiary</item>
   </style>
