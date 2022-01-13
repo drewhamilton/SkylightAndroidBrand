@@ -28,6 +28,8 @@ class DemoActivity : AppCompatActivity() {
         DemoBinding.inflate(layoutInflater)
     }
 
+    private var isDynamicColorsEnabled = false
+
     private var isFullscreen: Boolean = true
 
     private var isErrorSnackbarShowing: Boolean = false
@@ -38,8 +40,10 @@ class DemoActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
         }
+        isDynamicColorsEnabled = savedInstanceState?.getBoolean(KEY_IS_DYNAMIC_COLORS_ENABLED) ?: false
         val defaultFullscreen = Build.VERSION.SDK_INT >= 29
-        setFullscreen(savedInstanceState?.getBoolean(KEY_IS_FULLSCREEN) ?: defaultFullscreen)
+        isFullscreen = savedInstanceState?.getBoolean(KEY_IS_FULLSCREEN) ?: defaultFullscreen
+        applySelectedTheme()
         WindowCompat.setDecorFitsSystemWindows(window, !isFullscreen)
 
         super.onCreate(savedInstanceState)
@@ -58,6 +62,14 @@ class DemoActivity : AppCompatActivity() {
             windowInsets
         }
 
+        binding.dynamicColorsSwitch.setOnCheckedChangeListener { _, isChecked ->
+            afterDelay {
+                val previousValue = isDynamicColorsEnabled
+                isDynamicColorsEnabled = isChecked
+                applySelectedTheme(recreate = isDynamicColorsEnabled != previousValue)
+            }
+        }
+
         binding.darkModeSwitch.isChecked = resources.getBoolean(R.bool.nightMode)
         binding.darkModeSwitch.setOnCheckedChangeListener { _, isChecked ->
             // Delay night mode so the switch animation completes:
@@ -71,8 +83,8 @@ class DemoActivity : AppCompatActivity() {
         binding.fullscreenSwitch.isChecked = isFullscreen
         binding.fullscreenSwitch.setOnCheckedChangeListener { _, isChecked ->
             afterDelay {
-                setFullscreen(isChecked)
-                recreate()
+                isFullscreen = isChecked
+                applySelectedTheme(recreate = true)
             }
         }
 
@@ -100,17 +112,25 @@ class DemoActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
+        outState.putBoolean(KEY_IS_DYNAMIC_COLORS_ENABLED, isDynamicColorsEnabled)
         outState.putBoolean(KEY_IS_FULLSCREEN, isFullscreen)
         outState.putBoolean(KEY_IS_ERROR_SHOWING, isErrorSnackbarShowing)
         outState.putBoolean(KEY_IS_BOTTOM_SHEET_SHOWING, isBottomSheetShowing)
         outState.putBoolean(KEY_IS_ALERT_DIALOG_SHOWING, isAlertDialogShowing)
     }
 
-    private fun setFullscreen(fullscreen: Boolean) {
-        isFullscreen = fullscreen
-        val theme = if (fullscreen) R.style.Theme3_Skylight_Fullscreen else R.style.Theme3_Skylight
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+
+    }
+
+    private fun applySelectedTheme(recreate: Boolean = false) {
+        val theme = if (isFullscreen) R.style.Theme3_Skylight_Fullscreen else R.style.Theme3_Skylight
         setTheme(theme)
-        DynamicColors.applyIfAvailable(this)
+
+        if (isDynamicColorsEnabled) DynamicColors.applyIfAvailable(this)
+
+        if (recreate) recreate()
     }
 
     private fun ViewBinding.showErrorSnackbar() {
@@ -175,6 +195,7 @@ class DemoActivity : AppCompatActivity() {
     }
 
     private companion object {
+        private const val KEY_IS_DYNAMIC_COLORS_ENABLED = "is_dynamic_colors_enabled"
         private const val KEY_IS_FULLSCREEN = "is_fullscreen"
         private const val KEY_IS_ERROR_SHOWING = "is_error_showing"
         private const val KEY_IS_BOTTOM_SHEET_SHOWING = "is_bottom_sheet_showing"
