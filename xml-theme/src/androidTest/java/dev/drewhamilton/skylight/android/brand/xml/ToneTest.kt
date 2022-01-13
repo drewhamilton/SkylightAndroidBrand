@@ -64,6 +64,60 @@ class ToneTest {
     }
     //endregion
 
+    //region Skylight neutral variant rose
+    @Test fun neutralRose100() {
+        assertResourceTone(100, R.color.skylight_neutralRose_100)
+    }
+
+    @Test fun neutralRose99() {
+        assertResourceTone(99, R.color.skylight_neutralRose_99)
+    }
+
+    @Test fun neutralRose95() {
+        assertResourceTone(95, R.color.skylight_neutralRose_95)
+    }
+
+    @Test fun neutralRose90() {
+        assertResourceTone(90, R.color.skylight_neutralRose_90)
+    }
+
+    @Test fun neutralRose80() {
+        assertResourceTone(80, R.color.skylight_neutralRose_80)
+    }
+
+    @Test fun neutralRose70() {
+        assertResourceTone(70, R.color.skylight_neutralRose_70)
+    }
+
+    @Test fun neutralRose60() {
+        assertResourceTone(60, R.color.skylight_neutralRose_60)
+    }
+
+    @Test fun neutralRose50() {
+        assertResourceTone(50, R.color.skylight_neutralRose_50)
+    }
+
+    @Test fun neutralRose40() {
+        assertResourceTone(40, R.color.skylight_neutralRose_40)
+    }
+
+    @Test fun neutralRose30() {
+        assertResourceTone(30, R.color.skylight_neutralRose_30)
+    }
+
+    @Test fun neutralRose20() {
+        assertResourceTone(20, R.color.skylight_neutralRose_20)
+    }
+
+    @Test fun neutralRose10() {
+        assertResourceTone(10, R.color.skylight_neutralRose_10)
+    }
+
+    @Test fun neutralRose0() {
+        assertResourceTone(0, R.color.skylight_neutralRose_0)
+    }
+    //endregion
+
     //region Skylight purple
     @Test fun purple100() {
         assertResourceTone(100, R.color.skylight_purple_100)
@@ -115,6 +169,60 @@ class ToneTest {
 
     @Test fun purple0() {
         assertResourceTone(0, R.color.skylight_purple_0)
+    }
+    //endregion
+
+    //region Skylight neutral variant purple
+    @Test fun neutralPurple100() {
+        assertResourceTone(100, R.color.skylight_neutralPurple_100)
+    }
+
+    @Test fun neutralPurple99() {
+        assertResourceTone(99, R.color.skylight_neutralPurple_99)
+    }
+
+    @Test fun neutralPurple95() {
+        assertResourceTone(95, R.color.skylight_neutralPurple_95)
+    }
+
+    @Test fun neutralPurple90() {
+        assertResourceTone(90, R.color.skylight_neutralPurple_90)
+    }
+
+    @Test fun neutralPurple80() {
+        assertResourceTone(80, R.color.skylight_neutralPurple_80)
+    }
+
+    @Test fun neutralPurple70() {
+        assertResourceTone(70, R.color.skylight_neutralPurple_70)
+    }
+
+    @Test fun neutralPurple60() {
+        assertResourceTone(60, R.color.skylight_neutralPurple_60)
+    }
+
+    @Test fun neutralPurple50() {
+        assertResourceTone(50, R.color.skylight_neutralPurple_50)
+    }
+
+    @Test fun neutralPurple40() {
+        assertResourceTone(40, R.color.skylight_neutralPurple_40)
+    }
+
+    @Test fun neutralPurple30() {
+        assertResourceTone(30, R.color.skylight_neutralPurple_30)
+    }
+
+    @Test fun neutralPurple20() {
+        assertResourceTone(20, R.color.skylight_neutralPurple_20)
+    }
+
+    @Test fun neutralPurple10() {
+        assertResourceTone(10, R.color.skylight_neutralPurple_10)
+    }
+
+    @Test fun neutralPurple0() {
+        assertResourceTone(0, R.color.skylight_neutralPurple_0)
     }
     //endregion
 
@@ -173,6 +281,7 @@ class ToneTest {
     //endregion
 
     //region ref palette primary
+    // Sanity check default material color tones
     @Test fun refPrimary100() {
         assertResourceTone(100, R.color.m3_ref_palette_primary100)
     }
