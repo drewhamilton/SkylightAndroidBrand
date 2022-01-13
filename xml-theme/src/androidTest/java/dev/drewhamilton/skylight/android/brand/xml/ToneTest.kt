@@ -118,6 +118,60 @@ class ToneTest {
     }
     //endregion
 
+    //region Skylight pink
+    @Test fun pink100() {
+        assertResourceTone(100, R.color.skylight_pink_100)
+    }
+
+    @Test fun pink99() {
+        assertResourceTone(99, R.color.skylight_pink_99)
+    }
+
+    @Test fun pink95() {
+        assertResourceTone(95, R.color.skylight_pink_95)
+    }
+
+    @Test fun pink90() {
+        assertResourceTone(90, R.color.skylight_pink_90)
+    }
+
+    @Test fun pink80() {
+        assertResourceTone(80, R.color.skylight_pink_80)
+    }
+
+    @Test fun pink70() {
+        assertResourceTone(70, R.color.skylight_pink_70)
+    }
+
+    @Test fun pink60() {
+        assertResourceTone(60, R.color.skylight_pink_60)
+    }
+
+    @Test fun pink50() {
+        assertResourceTone(50, R.color.skylight_pink_50)
+    }
+
+    @Test fun pink40() {
+        assertResourceTone(40, R.color.skylight_pink_40)
+    }
+
+    @Test fun pink30() {
+        assertResourceTone(30, R.color.skylight_pink_30)
+    }
+
+    @Test fun pink20() {
+        assertResourceTone(20, R.color.skylight_pink_20)
+    }
+
+    @Test fun pink10() {
+        assertResourceTone(10, R.color.skylight_pink_10)
+    }
+
+    @Test fun pink0() {
+        assertResourceTone(0, R.color.skylight_pink_0)
+    }
+    //endregion
+
     //region ref palette primary
     @Test fun refPrimary100() {
         assertResourceTone(100, R.color.m3_ref_palette_primary100)

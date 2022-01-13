@@ -31,4 +31,19 @@
   <color name="skylight_purple_10">#350045</color>
   <color name="skylight_purple_0">#000000</color>
 
+  <!-- Pink -->
+  <color name="skylight_pink_100">#ffffff</color>
+  <color name="skylight_pink_99">#fffbfc</color>
+  <color name="skylight_pink_95">#ffeaf1</color>
+  <color name="skylight_pink_90">#ffd7e5</color>
+  <color name="skylight_pink_80">#ffafca</color>
+  <color name="skylight_pink_70">#ff82ad</color>
+  <color name="skylight_pink_60">#ee6090</color>
+  <color name="skylight_pink_50">#d43870</color>
+  <color name="skylight_pink_40">#b7185b</color>
+  <color name="skylight_pink_30">#8c0b38</color>
+  <color name="skylight_pink_20">#660024</color>
+  <color name="skylight_pink_10">#410017</color>
+  <color name="skylight_pink_0">#000000</color>
+
 </resources>
