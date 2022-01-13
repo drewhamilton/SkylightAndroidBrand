@@ -55,6 +55,8 @@
     <item name="colorErrorContainer">@color/skylight_pink_90</item>
     <item name="colorOnErrorContainer">@color/skylight_pink_10</item>
     <!--endregion-->
+
+    <item name="elevationOverlayColor">?colorTertiary</item>
   </style>
 
   <style name="Base.V21.Theme3.Skylight.Dark" parent="Theme.Material3.Dark.NoActionBar">
@@ -94,6 +96,8 @@
 
     <item name="android:statusBarColor">?colorSurfaceVariant</item>
     <item name="android:navigationBarColor">?colorSurfaceVariant</item>
+
+    <item name="elevationOverlayColor">?colorTertiary</item>
   </style>
 
 </resources>
