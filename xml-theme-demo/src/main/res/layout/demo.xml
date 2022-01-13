@@ -60,16 +60,6 @@
             android:textAppearance="?textAppearanceSubtitle1" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
-            android:id="@+id/darkModeSwitch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:checked="@bool/nightMode"
-            android:padding="@dimen/marginHorizontal_mainText"
-            android:text="Dark mode"
-            android:textAppearance="?textAppearanceSubtitle1" />
-
-        <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/fullscreenSwitch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,6 +68,25 @@
             android:padding="@dimen/marginHorizontal_mainText"
             android:text="Fullscreen"
             android:textAppearance="?textAppearanceSubtitle1" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/darkModeSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:checked="@bool/nightMode"
+            android:padding="@dimen/marginHorizontal_mainText"
+            android:text="Dark mode"
+            android:textAppearance="?textAppearanceSubtitle1"
+            />
+
+        <include
+            android:id="@+id/colorPalette"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            layout="@layout/palette"
+            />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/buttonsSwitch"

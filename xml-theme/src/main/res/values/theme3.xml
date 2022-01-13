@@ -81,8 +81,8 @@
     <item name="colorOnSecondaryContainer">@color/skylight_amber_90</item>
 
     <item name="colorTertiary">@color/skylight_purple_70</item>
-    <item name="colorOnTertiary">@color/skylight_purple_90</item>
-    <item name="colorTertiaryContainer">@color/skylight_purple_20</item>
+    <item name="colorOnTertiary">@color/skylight_purple_20</item>
+    <item name="colorTertiaryContainer">@color/skylight_purple_40</item>
     <item name="colorOnTertiaryContainer">@color/skylight_purple_90</item>
 
     <item name="android:colorBackground">@color/skylight_purple_10</item>
