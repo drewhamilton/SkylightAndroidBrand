@@ -6,9 +6,9 @@
   <color name="skylight_sunset">@color/skylight_deepRed_extraDark</color>
   <color name="skylight_dusk">@color/skylight_darkPurple_light</color>
 
-  <color name="skylight_launcherIcon_sun">@color/skylight_amber_extraLight</color>
-  <color name="skylight_launcherIcon_ground">@color/skylight_darkPurple_light</color>
-  <color name="skylight_launcherIcon_upperSky">@color/skylight_amber</color>
-  <color name="skylight_launcherIcon_lowerSky">@color/skylight_amber_extraDark</color>
+  <color name="skylight_launcherIcon_sun">@color/skylight_amber_95</color>
+  <color name="skylight_launcherIcon_ground">@color/skylight_purple_10</color>
+  <color name="skylight_launcherIcon_upperSky">@color/skylight_amber_80</color>
+  <color name="skylight_launcherIcon_lowerSky">@color/skylight_amber_60</color>
 
 </resources>
