@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-  <public name="Theme.Skylight.DayNight" type="style" />
+  <public name="Theme.Skylight.Fullscreen" type="style" />
+  <public name="Theme.Skylight.Light.Fullscreen" type="style" />
+  <public name="Theme.Skylight.Dark.Fullscreen" type="style" />
+
+  <public name="Theme.Skylight" type="style" />
   <public name="Theme.Skylight.Light" type="style" />
   <public name="Theme.Skylight.Dark" type="style" />
-
-  <public name="preferredStatusBarColor" type="reference" />
-  <public name="preferredNavigationBarColor" type="reference" />
 
   <public name="skylight_dawn" type="color" />
   <public name="skylight_sunrise" type="color" />

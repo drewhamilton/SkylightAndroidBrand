@@ -11,12 +11,142 @@
 
     tools:ignore="HardcodedText">
 
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <com.google.android.material.appbar.MaterialToolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          app:title="@string/app_name"
+
+          tools:layout_marginTop="24dp" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:clipToPadding="false"
+        android:paddingTop="16dp"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:gravity="center_horizontal"
+          android:orientation="vertical">
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/dynamicColorsSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:checked="false"
+            android:enabled="@bool/dynamicColorsSupported"
+            android:padding="@dimen/marginHorizontal_mainText"
+            android:text="Dynamic colors"
+            android:textAppearance="?textAppearanceSubtitle1" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/fullscreenSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:checked="true"
+            android:padding="@dimen/marginHorizontal_mainText"
+            android:text="Fullscreen"
+            android:textAppearance="?textAppearanceSubtitle1" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/darkModeSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:checked="@bool/nightMode"
+            android:padding="@dimen/marginHorizontal_mainText"
+            android:text="Dark mode"
+            android:textAppearance="?textAppearanceSubtitle1"
+            />
+
+        <include
+            android:id="@+id/colorPalette"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            layout="@layout/palette"
+            />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/buttonsSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:checked="true"
+            android:padding="@dimen/marginHorizontal_mainText"
+            android:text="Buttons enabled"
+            android:textAppearance="?textAppearanceSubtitle1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/errorSnackbarButton"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:text="Error snackbar" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bottomSheetButton"
+            style="?materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:text="Bottom sheet" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/alert_dialog_button"
+            style="?materialButtonStyle"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:text="Alert dialog" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:padding="16dp"
+            android:text="@string/long_body_text"
+            android:textAppearance="?textAppearanceBody1"
+            android:textIsSelectable="true"
+            />
+
+      </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
   <View
       android:id="@+id/statusBarBackdrop"
       android:layout_width="0dp"
       android:layout_height="0dp"
 
-      android:background="?preferredStatusBarColor"
+      android:background="@color/statusBarBackdrop"
 
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
@@ -24,114 +154,12 @@
 
       tools:layout_height="24dp" />
 
-  <com.google.android.material.appbar.MaterialToolbar
-      android:id="@+id/toolbar"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/statusBarBackdrop"
-
-      app:title="@string/app_name"
-      app:titleTextColor="?colorOnSurface" />
-
-  <ScrollView
-      android:id="@+id/scrollView"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-
-      android:clipToPadding="false"
-      android:paddingTop="16dp"
-
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/toolbar">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-
-      <com.google.android.material.switchmaterial.SwitchMaterial
-          android:id="@+id/darkModeSwitch"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-
-          android:checked="@bool/nightMode"
-          android:padding="@dimen/marginHorizontal_mainText"
-          android:text="Dark mode"
-          android:textAppearance="?textAppearanceSubtitle1" />
-
-      <com.google.android.material.switchmaterial.SwitchMaterial
-          android:id="@+id/fullscreenSwitch"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-
-          android:checked="true"
-          android:padding="@dimen/marginHorizontal_mainText"
-          android:text="Fullscreen"
-          android:textAppearance="?textAppearanceSubtitle1" />
-
-      <com.google.android.material.switchmaterial.SwitchMaterial
-          android:id="@+id/buttonsSwitch"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-
-          android:checked="true"
-          android:padding="@dimen/marginHorizontal_mainText"
-          android:text="Buttons enabled"
-          android:textAppearance="?textAppearanceSubtitle1" />
-
-      <com.google.android.material.button.MaterialButton
-          android:id="@+id/errorSnackbarButton"
-          style="@style/Widget.MaterialComponents.Button.TextButton"
-          android:layout_width="wrap_content"
-
-          android:layout_height="wrap_content"
-
-          android:text="Error snackbar" />
-
-      <com.google.android.material.button.MaterialButton
-          android:id="@+id/bottomSheetButton"
-          style="?materialButtonOutlinedStyle"
-          android:layout_width="wrap_content"
-
-          android:layout_height="wrap_content"
-
-          android:text="Bottom sheet" />
-
-      <com.google.android.material.button.MaterialButton
-          android:id="@+id/alert_dialog_button"
-          style="?materialButtonStyle"
-          android:layout_width="wrap_content"
-
-          android:layout_height="wrap_content"
-
-          android:text="Alert dialog" />
-
-      <TextView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-
-          android:padding="16dp"
-          android:text="@string/long_body_text"
-          android:textAppearance="?textAppearanceBody1" />
-
-    </LinearLayout>
-
-  </ScrollView>
-
   <View
       android:id="@+id/navigationBarBackrop"
       android:layout_width="0dp"
       android:layout_height="0dp"
 
-      android:alpha="0.75"
-      android:background="?preferredNavigationBarColor"
+      android:background="@color/navigationBarBackdrop"
       android:elevation="1000dp"
 
       app:layout_constraintEnd_toEndOf="parent"

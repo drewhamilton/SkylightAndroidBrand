@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- Amber -->
+  <color name="skylight_amber_100">#ffffff</color>
+  <color name="skylight_amber_99">#fffbf0</color>
+  <color name="skylight_amber_95">#ffefc3</color>
+  <color name="skylight_amber_90">#ffe083</color>
+  <color name="skylight_amber_80">#ffba00</color>
+  <color name="skylight_amber_70">#ff8c00</color>
+  <color name="skylight_amber_60">#fd5800</color>
+  <color name="skylight_amber_50">#e81c00</color>
+  <color name="skylight_amber_40">#c10c00</color>
+  <color name="skylight_amber_30">#930600</color>
+  <color name="skylight_amber_20">#6a0300</color>
+  <color name="skylight_amber_10">#430000</color>
+  <color name="skylight_amber_0">#000000</color>
+
+  <!-- Neutral variant rose -->
+  <color name="skylight_neutralRose_100">#ffffff</color>
+  <color name="skylight_neutralRose_99">#fffdfa</color>
+  <color name="skylight_neutralRose_95">#ffede9</color>
+  <color name="skylight_neutralRose_90">#f5deda</color>
+  <color name="skylight_neutralRose_80">#d8c2be</color>
+  <color name="skylight_neutralRose_70">#bda7a3</color>
+  <color name="skylight_neutralRose_60">#a08c89</color>
+  <color name="skylight_neutralRose_50">#857370</color>
+  <color name="skylight_neutralRose_40">#6b5a57</color>
+  <color name="skylight_neutralRose_30">#524340</color>
+  <color name="skylight_neutralRose_20">#3b2d2a</color>
+  <color name="skylight_neutralRose_10">#251817</color>
+  <color name="skylight_neutralRose_0">#000000</color>
+
+  <!-- Purple -->
+  <color name="skylight_purple_100">#ffffff</color>
+  <color name="skylight_purple_99">#fffbfc</color>
+  <color name="skylight_purple_95">#fcecf8</color>
+  <color name="skylight_purple_90">#f3ddf1</color>
+  <color name="skylight_purple_80">#e1bae0</color>
+  <color name="skylight_purple_70">#cb9dcd</color>
+  <color name="skylight_purple_60">#b081b2</color>
+  <color name="skylight_purple_50">#98689a</color>
+  <color name="skylight_purple_40">#7a517f</color>
+  <color name="skylight_purple_30">#63346c</color>
+  <color name="skylight_purple_20">#501659</color>
+  <color name="skylight_purple_10">#350045</color>
+  <color name="skylight_purple_0">#000000</color>
+
+  <!-- Neutral variant purple -->
+  <color name="skylight_neutralPurple_100">#ffffff</color>
+  <color name="skylight_neutralPurple_99">#fffbfe</color>
+  <color name="skylight_neutralPurple_95">#f5eefa</color>
+  <color name="skylight_neutralPurple_90">#e7e0ec</color>
+  <color name="skylight_neutralPurple_80">#cac4d0</color>
+  <color name="skylight_neutralPurple_70">#aea9b4</color>
+  <color name="skylight_neutralPurple_60">#938f99</color>
+  <color name="skylight_neutralPurple_50">#79747e</color>
+  <color name="skylight_neutralPurple_40">#605d66</color>
+  <color name="skylight_neutralPurple_30">#49454f</color>
+  <color name="skylight_neutralPurple_20">#322f37</color>
+  <color name="skylight_neutralPurple_10">#1d1a22</color>
+  <color name="skylight_neutralPurple_0">#000000</color>
+
+  <!-- Pink -->
+  <color name="skylight_pink_100">#ffffff</color>
+  <color name="skylight_pink_99">#fffbfc</color>
+  <color name="skylight_pink_95">#ffeaf1</color>
+  <color name="skylight_pink_90">#ffd7e5</color>
+  <color name="skylight_pink_80">#ffafca</color>
+  <color name="skylight_pink_70">#ff82ad</color>
+  <color name="skylight_pink_60">#ee6090</color>
+  <color name="skylight_pink_50">#d43870</color>
+  <color name="skylight_pink_40">#b7185b</color>
+  <color name="skylight_pink_30">#8c0b38</color>
+  <color name="skylight_pink_20">#660024</color>
+  <color name="skylight_pink_10">#410017</color>
+  <color name="skylight_pink_0">#000000</color>
+
+</resources>

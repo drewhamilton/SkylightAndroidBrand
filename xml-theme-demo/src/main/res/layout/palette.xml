@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    tools:ignore="HardcodedText"
+    >
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <!--region Primary-->
+    <TextView
+        android:id="@+id/primary_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorPrimary"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="Primary"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorOnPrimary"
+
+        app:layout_constraintBottom_toTopOf="@+id/secondary_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/onPrimary_swatch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/onPrimary_swatch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="?colorOnPrimary"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="On primary"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorPrimary"
+
+        app:layout_constraintBottom_toBottomOf="@+id/primary_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/primaryContainer_swatch"
+        app:layout_constraintStart_toEndOf="@+id/primary_swatch"
+        app:layout_constraintTop_toTopOf="@+id/primary_swatch"
+        />
+
+    <TextView
+        android:id="@+id/primaryContainer_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorPrimaryContainer"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="Primary container"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorOnPrimaryContainer"
+
+        app:layout_constraintBottom_toBottomOf="@+id/primary_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/onPrimaryContainer_swatch"
+        app:layout_constraintStart_toEndOf="@+id/onPrimary_swatch"
+        app:layout_constraintTop_toTopOf="@+id/primary_swatch"
+        />
+
+    <TextView
+        android:id="@+id/onPrimaryContainer_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorOnPrimaryContainer"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="On primary container"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorPrimaryContainer"
+
+        app:layout_constraintBottom_toBottomOf="@+id/primary_swatch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/primaryContainer_swatch"
+        app:layout_constraintTop_toTopOf="@+id/primary_swatch"
+        />
+    <!--endregion-->
+
+    <!--region Secondary-->
+    <TextView
+        android:id="@+id/secondary_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorSecondary"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="Secondary"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorOnSecondary"
+
+        app:layout_constraintBottom_toTopOf="@+id/tertiary_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/onSecondary_swatch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primary_swatch"
+        />
+
+    <TextView
+        android:id="@+id/onSecondary_swatch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="?colorOnSecondary"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="On secondary"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorSecondary"
+
+        app:layout_constraintBottom_toBottomOf="@+id/secondary_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/secondaryContainer_swatch"
+        app:layout_constraintStart_toEndOf="@+id/secondary_swatch"
+        app:layout_constraintTop_toTopOf="@+id/secondary_swatch"
+        />
+
+    <TextView
+        android:id="@+id/secondaryContainer_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorSecondaryContainer"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="Secondary container"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorOnSecondaryContainer"
+
+        app:layout_constraintBottom_toBottomOf="@+id/secondary_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/onSecondaryContainer_swatch"
+        app:layout_constraintStart_toEndOf="@+id/onSecondary_swatch"
+        app:layout_constraintTop_toTopOf="@+id/secondary_swatch"
+        />
+
+    <TextView
+        android:id="@+id/onSecondaryContainer_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorOnSecondaryContainer"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="On secondary container"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorSecondaryContainer"
+
+        app:layout_constraintBottom_toBottomOf="@+id/secondary_swatch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/secondaryContainer_swatch"
+        app:layout_constraintTop_toTopOf="@+id/secondary_swatch"
+        />
+    <!--endregion-->
+
+    <!--region Tertiary-->
+    <TextView
+        android:id="@+id/tertiary_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorTertiary"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="Tertiary"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorOnTertiary"
+
+        app:layout_constraintBottom_toTopOf="@+id/error_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/onTertiary_swatch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondary_swatch"
+        />
+
+    <TextView
+        android:id="@+id/onTertiary_swatch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="?colorOnTertiary"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="On tertiary"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorTertiary"
+
+        app:layout_constraintBottom_toBottomOf="@+id/tertiary_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/tertiaryContainer_swatch"
+        app:layout_constraintStart_toEndOf="@+id/tertiary_swatch"
+        app:layout_constraintTop_toTopOf="@+id/tertiary_swatch"
+        />
+
+    <TextView
+        android:id="@+id/tertiaryContainer_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorTertiaryContainer"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="Tertiary container"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorOnTertiaryContainer"
+
+        app:layout_constraintBottom_toBottomOf="@+id/tertiary_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/onTertiaryContainer_swatch"
+        app:layout_constraintStart_toEndOf="@+id/onTertiary_swatch"
+        app:layout_constraintTop_toTopOf="@+id/tertiary_swatch"
+        />
+
+    <TextView
+        android:id="@+id/onTertiaryContainer_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorOnTertiaryContainer"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="On tertiary container"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorTertiaryContainer"
+
+        app:layout_constraintBottom_toBottomOf="@+id/tertiary_swatch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tertiaryContainer_swatch"
+        app:layout_constraintTop_toTopOf="@+id/tertiary_swatch"
+        />
+    <!--endregion-->
+
+    <!--region Error-->
+    <TextView
+        android:id="@+id/error_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorError"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="Error"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorOnError"
+
+        app:layout_constraintBottom_toTopOf="@+id/background_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/onError_swatch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tertiary_swatch"
+        />
+
+    <TextView
+        android:id="@+id/onError_swatch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="?colorOnError"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="On error"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorError"
+
+        app:layout_constraintBottom_toBottomOf="@+id/error_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/errorContainer_swatch"
+        app:layout_constraintStart_toEndOf="@+id/error_swatch"
+        app:layout_constraintTop_toTopOf="@+id/error_swatch"
+        />
+
+    <TextView
+        android:id="@+id/errorContainer_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorErrorContainer"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="Error container"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorOnErrorContainer"
+
+        app:layout_constraintBottom_toBottomOf="@+id/error_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/onErrorContainer_swatch"
+        app:layout_constraintStart_toEndOf="@+id/onError_swatch"
+        app:layout_constraintTop_toTopOf="@+id/error_swatch"
+        />
+
+    <TextView
+        android:id="@+id/onErrorContainer_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorOnErrorContainer"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="On error container"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorErrorContainer"
+
+        app:layout_constraintBottom_toBottomOf="@+id/error_swatch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/errorContainer_swatch"
+        app:layout_constraintTop_toTopOf="@+id/error_swatch"
+        />
+    <!--endregion-->
+
+    <!--region Background & surface-->
+    <TextView
+        android:id="@+id/background_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?android:colorBackground"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="Background"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorOnBackground"
+
+        app:layout_constraintBottom_toTopOf="@+id/outline_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/onBackground_swatch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/error_swatch"
+        />
+
+    <TextView
+        android:id="@+id/onBackground_swatch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="?colorOnBackground"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="On background"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?android:colorBackground"
+
+        app:layout_constraintBottom_toBottomOf="@+id/background_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/surface_swatch"
+        app:layout_constraintStart_toEndOf="@+id/background_swatch"
+        app:layout_constraintTop_toTopOf="@+id/background_swatch"
+        />
+
+    <TextView
+        android:id="@+id/surface_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorSurface"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="Surface"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorOnSurface"
+
+        app:layout_constraintBottom_toBottomOf="@+id/background_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/onSurface_swatch"
+        app:layout_constraintStart_toEndOf="@+id/onBackground_swatch"
+        app:layout_constraintTop_toTopOf="@+id/background_swatch"
+        />
+
+    <TextView
+        android:id="@+id/onSurface_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorOnSurface"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="On surface"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorSurface"
+
+        app:layout_constraintBottom_toBottomOf="@+id/background_swatch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/surface_swatch"
+        app:layout_constraintTop_toTopOf="@+id/background_swatch"
+        />
+    <!--endregion-->
+
+    <!--region Surface variant-->
+    <TextView
+        android:id="@+id/outline_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorOutline"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="Outline"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="#ffffff"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/surfaceVariant_swatch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/background_swatch"
+        app:layout_constraintHorizontal_weight="2"
+        />
+
+    <TextView
+        android:id="@+id/surfaceVariant_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorSurfaceVariant"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="Surface variant"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorOnSurfaceVariant"
+
+        app:layout_constraintBottom_toBottomOf="@+id/outline_swatch"
+        app:layout_constraintEnd_toStartOf="@+id/onSurfaceVariant_swatch"
+        app:layout_constraintStart_toEndOf="@+id/outline_swatch"
+        app:layout_constraintTop_toTopOf="@+id/outline_swatch"
+        app:layout_constraintHorizontal_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/onSurfaceVariant_swatch"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:background="?colorOnSurfaceVariant"
+        android:padding="@dimen/padding_colorSwatch"
+        android:text="On surface variant"
+        android:textAppearance="?textAppearanceLabelLarge"
+        android:textColor="?colorSurfaceVariant"
+
+        app:layout_constraintBottom_toBottomOf="@+id/outline_swatch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/surfaceVariant_swatch"
+        app:layout_constraintTop_toTopOf="@+id/outline_swatch"
+        app:layout_constraintHorizontal_weight="1"
+        />
+    <!--endregion-->
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
