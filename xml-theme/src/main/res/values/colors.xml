@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-  <color name="skylight_dawn">@color/skylight_lightPurple</color>
-  <color name="skylight_sunrise">@color/skylight_amber_dark</color>
-  <color name="skylight_sunset">@color/skylight_deepRed_extraDark</color>
-  <color name="skylight_dusk">@color/skylight_darkPurple_light</color>
+  <color name="skylight_dawn">@color/skylight_purple_80</color>
+  <color name="skylight_sunrise">@color/skylight_amber_80</color>
+  <color name="skylight_sunset">@color/skylight_amber_30</color>
+  <color name="skylight_dusk">@color/skylight_purple_10</color>
 
   <color name="skylight_launcherIcon_sun">@color/skylight_amber_95</color>
   <color name="skylight_launcherIcon_ground">@color/skylight_purple_10</color>
