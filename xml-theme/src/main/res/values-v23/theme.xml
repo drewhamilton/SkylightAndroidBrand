@@ -4,8 +4,8 @@
   <style name="Theme.Skylight.Light" parent="Base.V23.Theme.Skylight.Light" />
 
   <style name="Base.V23.Theme.Skylight.Light" parent="Base.V21.Theme.Skylight.Light">
+    <item name="android:statusBarColor">?colorOnSurfaceInverse</item>
     <item name="android:windowLightStatusBar">true</item>
-    <item name="preferredStatusBarColor">?colorSurface</item>
   </style>
 
 </resources>

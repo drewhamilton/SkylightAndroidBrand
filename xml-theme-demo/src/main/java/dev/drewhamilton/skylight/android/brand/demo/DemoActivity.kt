@@ -125,7 +125,7 @@ class DemoActivity : AppCompatActivity() {
     }
 
     private fun applySelectedTheme(recreate: Boolean = false) {
-        val theme = if (isFullscreen) R.style.Theme3_Skylight_Fullscreen else R.style.Theme3_Skylight
+        val theme = if (isFullscreen) R.style.Theme_Skylight_Fullscreen else R.style.Theme_Skylight
         setTheme(theme)
 
         if (isDynamicColorsEnabled) DynamicColors.applyIfAvailable(this)

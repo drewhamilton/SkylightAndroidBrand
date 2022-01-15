@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-  <style name="Theme3.Skylight.Fullscreen" parent="Theme3.Skylight.Dark.Fullscreen" />
-
-  <style name="Theme3.Skylight" parent="Theme3.Skylight.Dark" />
-
-</resources>

@@ -1,114 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
-
-  <style name="Theme.Skylight" parent="Theme.Skylight.Light" />
-
-  <style name="Theme.Skylight.Dark" parent="Base.V21.Theme.Skylight.Dark" />
-  <style name="Theme.Skylight.Light" parent="Base.V21.Theme.Skylight.Light" />
+<resources>
 
   <style name="Theme.Skylight.Fullscreen" parent="Theme.Skylight.Light.Fullscreen" />
+  <style name="Theme.Skylight" parent="Theme.Skylight.Light" />
 
+  <style name="Theme.Skylight.Light.Fullscreen">
+    <item name="android:statusBarColor">#00ffffff</item>
+    <item name="android:navigationBarColor">#00ffffff</item>
+    <item name="android:windowTranslucentStatus">false</item>
+    <item name="android:windowTranslucentNavigation">false</item>
+  </style>
   <style name="Theme.Skylight.Dark.Fullscreen">
     <item name="android:statusBarColor">#00000000</item>
     <item name="android:navigationBarColor">#00000000</item>
     <item name="android:windowTranslucentStatus">false</item>
     <item name="android:windowTranslucentNavigation">false</item>
   </style>
-  <style name="Theme.Skylight.Light.Fullscreen">
-    <item name="android:statusBarColor">#00ffffff</item>
-    <item name="android:navigationBarColor">#00ffffff</item>
-    <item name="android:navigationBarDividerColor" tools:targetApi="27">@null</item>
-    <item name="android:windowTranslucentStatus">false</item>
-    <item name="android:windowTranslucentNavigation">false</item>
-  </style>
 
-  <!--region Base-->
-  <style name="Base.V21.Theme.Skylight.Dark" parent="Theme.MaterialComponents.NoActionBar">
-    <!--Color attributes -->
-    <item name="colorPrimary">@color/skylight_amber_dark</item>
-    <item name="colorOnPrimary">#000000</item>
+  <style name="Theme.Skylight.Light" parent="Base.V21.Theme.Skylight.Light" />
+  <style name="Theme.Skylight.Dark" parent="Base.V21.Theme.Skylight.Dark" />
 
-    <item name="colorSecondary">?colorPrimary</item>
-    <item name="colorOnSecondary">?colorOnPrimary</item>
+  <style name="Base.V21.Theme.Skylight.Light" parent="Theme.Material3.Light.NoActionBar">
+    <!--region Color palettes -->
+    <item name="colorPrimary">@color/skylight_amber_40</item>
+    <item name="colorOnPrimary">@color/skylight_amber_100</item>
+    <item name="colorPrimaryInverse">@color/skylight_amber_80</item>
+    <item name="colorPrimaryContainer">@color/skylight_amber_90</item>
+    <item name="colorOnPrimaryContainer">@color/skylight_amber_10</item>
 
-    <item name="android:colorBackground">@color/skylight_darkPurple_dark</item>
-    <item name="colorOnBackground">#ffffff</item>
+    <item name="colorSecondary">@color/skylight_purple_40</item>
+    <item name="colorOnSecondary">@color/skylight_purple_100</item>
+    <item name="colorSecondaryContainer">@color/skylight_purple_90</item>
+    <item name="colorOnSecondaryContainer">@color/skylight_purple_10</item>
 
-    <item name="colorSurface">@color/skylight_darkPurple</item>
-    <item name="colorOnSurface">#ffffff</item>
+    <item name="colorTertiary">@color/skylight_amber_70</item>
+    <item name="colorOnTertiary">@color/skylight_amber_10</item>
+    <item name="colorTertiaryContainer">@color/skylight_amber_80</item>
+    <item name="colorOnTertiaryContainer">@color/skylight_amber_10</item>
 
-    <item name="colorError">@color/skylight_pink_light</item>
-    <item name="colorOnError">#000000</item>
+    <item name="android:colorBackground">@color/skylight_amber_99</item>
+    <item name="colorOnBackground">@color/skylight_amber_10</item>
 
-    <item name="preferredStatusBarColor">?colorSurface</item>
-    <item name="preferredNavigationBarColor">?android:colorBackground</item>
+    <item name="colorSurface">@color/skylight_amber_99</item>
+    <item name="colorOnSurface">@color/skylight_amber_10</item>
+    <item name="colorSurfaceVariant">@color/skylight_neutralRose_95</item>
+    <item name="colorOnSurfaceVariant">@color/skylight_neutralRose_30</item>
+    <item name="colorSurfaceInverse">@color/skylight_amber_20</item>
+    <item name="colorOnSurfaceInverse">@color/skylight_amber_95</item>
+    <item name="colorOutline">@color/skylight_neutralRose_50</item>
 
-    <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Skylight.Dark.BottomSheetDialog</item>
+    <item name="colorError">@color/skylight_pink_40</item>
+    <item name="colorOnError">@color/skylight_pink_100</item>
+    <item name="colorErrorContainer">@color/skylight_pink_90</item>
+    <item name="colorOnErrorContainer">@color/skylight_pink_10</item>
+    <!--endregion-->
 
-    <!--region Duplicated in dark and light themes-->
-    <item name="colorPrimaryVariant">?colorPrimary</item>
-    <item name="colorSecondaryVariant">?colorSecondary</item>
+    <!--region Text colors-->
+    <item name="android:textColorSecondary">@color/skylight_light_secondary_text</item>
+    <item name="android:textColorSecondaryInverse">@color/skylight_light_secondary_inverse_text</item>
+    <item name="android:textColorTertiary">@color/skylight_light_secondary_text</item>
+    <item name="android:textColorTertiaryInverse">@color/skylight_light_secondary_inverse_text</item>
+    <item name="android:textColorHighlight">@color/skylight_light_highlighted_text</item>
+    <item name="android:textColorHighlightInverse">@color/skylight_light_highlighted_inverse_text</item>
+    <!--endregion-->
 
-    <!--Component styles-->
-    <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Surface</item>
+    <item name="elevationOverlayColor">?colorTertiary</item>
 
-    <!--System bars-->
-    <item name="android:statusBarColor">?preferredStatusBarColor</item>
-    <item name="android:navigationBarColor">?preferredNavigationBarColor</item>
-
-    <!--Shape attributes-->
+    <!--region shape attributes-->
     <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Skylight.SmallComponent</item>
     <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Skylight.MediumComponent</item>
     <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Skylight.LargeComponent</item>
-
-    <!--Remap legacy AppCompat attributes to MaterialComponent attributes-->
-    <item name="colorPrimaryDark">?colorPrimaryVariant</item>
-    <item name="colorAccent">?colorSecondary</item>
     <!--endregion-->
   </style>
 
-  <style name="Base.V21.Theme.Skylight.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
-    <!--Color attributes -->
-    <item name="colorPrimary">@color/skylight_deepRed_dark</item>
-    <item name="colorOnPrimary">#ffffff</item>
+  <style name="Base.V21.Theme.Skylight.Dark" parent="Theme.Material3.Dark.NoActionBar">
+    <!--region Color palettes -->
+    <item name="colorPrimary">@color/skylight_purple_80</item>
+    <item name="colorOnPrimary">@color/skylight_purple_20</item>
+    <item name="colorPrimaryInverse">@color/skylight_purple_40</item>
+    <item name="colorPrimaryContainer">@color/skylight_purple_30</item>
+    <item name="colorOnPrimaryContainer">@color/skylight_purple_90</item>
 
-    <item name="colorSecondary">?colorPrimary</item>
-    <item name="colorOnSecondary">?colorOnPrimary</item>
+    <item name="colorSecondary">@color/skylight_amber_80</item>
+    <item name="colorOnSecondary">@color/skylight_amber_20</item>
+    <item name="colorSecondaryContainer">@color/skylight_amber_30</item>
+    <item name="colorOnSecondaryContainer">@color/skylight_amber_90</item>
 
-    <item name="android:colorBackground">@color/skylight_amber_extraLight</item>
-    <item name="colorOnBackground">#000000</item>
+    <item name="colorTertiary">@color/skylight_purple_70</item>
+    <item name="colorOnTertiary">@color/skylight_purple_20</item>
+    <item name="colorTertiaryContainer">@color/skylight_purple_40</item>
+    <item name="colorOnTertiaryContainer">@color/skylight_purple_90</item>
 
-    <item name="colorSurface">@color/skylight_amber_light</item>
-    <item name="colorOnSurface">#000000</item>
+    <item name="android:colorBackground">@color/skylight_purple_10</item>
+    <item name="colorOnBackground">@color/skylight_purple_90</item>
 
-    <item name="colorError">@color/skylight_pink_dark</item>
-    <item name="colorOnError">#ffffff</item>
+    <item name="colorSurface">@color/skylight_purple_10</item>
+    <item name="colorOnSurface">@color/skylight_purple_90</item>
+    <item name="colorSurfaceVariant">@color/skylight_neutralPurple_30</item>
+    <item name="colorOnSurfaceVariant">@color/skylight_neutralPurple_80</item>
+    <item name="colorSurfaceInverse">@color/skylight_purple_90</item>
+    <item name="colorOnSurfaceInverse">@color/skylight_purple_20</item>
+    <item name="colorOutline">@color/skylight_neutralPurple_60</item>
 
-    <item name="preferredStatusBarColor">@color/skylight_darkPurple_extraDark</item>
-    <item name="preferredNavigationBarColor">@color/skylight_darkPurple_extraDark</item>
+    <item name="colorError">@color/skylight_pink_80</item>
+    <item name="colorOnError">@color/skylight_pink_20</item>
+    <item name="colorErrorContainer">@color/skylight_pink_30</item>
+    <item name="colorOnErrorContainer">@color/skylight_pink_90</item>
+    <!--endregion-->
 
-    <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Skylight.Light.BottomSheetDialog</item>
+    <!--region Text colors-->
+    <item name="android:textColorSecondary">@color/skylight_dark_secondary_text</item>
+    <item name="android:textColorSecondaryInverse">@color/skylight_dark_secondary_inverse_text</item>
+    <item name="android:textColorTertiary">@color/skylight_dark_secondary_text</item>
+    <item name="android:textColorTertiaryInverse">@color/skylight_dark_secondary_inverse_text</item>
+    <item name="android:textColorHighlight">@color/skylight_dark_highlighted_text</item>
+    <item name="android:textColorHighlightInverse">@color/skylight_dark_highlighted_inverse_text</item>
+    <!--endregion-->
 
-    <!--region Duplicated in dark and light themes-->
-    <item name="colorPrimaryVariant">?colorPrimary</item>
-    <item name="colorSecondaryVariant">?colorSecondary</item>
+    <item name="android:statusBarColor">?colorOnSurfaceInverse</item>
+    <item name="android:navigationBarColor">?colorOnSurfaceInverse</item>
 
-    <!--Component styles-->
-    <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Surface</item>
+    <item name="elevationOverlayColor">?colorTertiary</item>
 
-    <!--System bars-->
-    <item name="android:statusBarColor">?preferredStatusBarColor</item>
-    <item name="android:navigationBarColor">?preferredNavigationBarColor</item>
-
-    <!--Shape attributes-->
+    <!--region shape attributes-->
     <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Skylight.SmallComponent</item>
     <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Skylight.MediumComponent</item>
     <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Skylight.LargeComponent</item>
-
-    <!--Remap legacy AppCompat attributes to MaterialComponent attributes-->
-    <item name="colorPrimaryDark">?colorPrimaryVariant</item>
-    <item name="colorAccent">?colorSecondary</item>
     <!--endregion-->
   </style>
-  <!--endregion-->
+
 </resources>
