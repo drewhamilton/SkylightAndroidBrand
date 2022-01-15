@@ -65,6 +65,12 @@
     <!--endregion-->
 
     <item name="elevationOverlayColor">?colorTertiary</item>
+
+    <!--region shape attributes-->
+    <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Skylight.SmallComponent</item>
+    <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Skylight.MediumComponent</item>
+    <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Skylight.LargeComponent</item>
+    <!--endregion-->
   </style>
 
   <style name="Base.V21.Theme3.Skylight.Dark" parent="Theme.Material3.Dark.NoActionBar">
@@ -115,6 +121,12 @@
     <item name="android:navigationBarColor">?colorOnSurfaceInverse</item>
 
     <item name="elevationOverlayColor">?colorTertiary</item>
+
+    <!--region shape attributes-->
+    <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Skylight.SmallComponent</item>
+    <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Skylight.MediumComponent</item>
+    <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Skylight.LargeComponent</item>
+    <!--endregion-->
   </style>
 
 </resources>
