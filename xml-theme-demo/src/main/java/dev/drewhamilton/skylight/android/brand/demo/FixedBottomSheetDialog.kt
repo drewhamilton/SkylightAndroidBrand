@@ -8,6 +8,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 /**
  * Fixes a bug in [BottomSheetDialog] where it does not respect
  * [android.R.attr.windowLightNavigationBar]'s value in the dialog theme.
+ *
+ * See https://github.com/material-components/material-components-android/issues/2582.
  */
 class FixedBottomSheetDialog(context: Context) : BottomSheetDialog(context) {
 
