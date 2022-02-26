@@ -155,17 +155,18 @@
       tools:layout_height="24dp" />
 
   <View
-      android:id="@+id/navigationBarBackrop"
+      android:id="@+id/navigationBarBackdrop"
       android:layout_width="0dp"
       android:layout_height="0dp"
 
       android:background="@color/navigationBarBackdrop"
-      android:elevation="1000dp"
 
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintBottom_toBottomOf="parent"
 
-      tools:layout_height="56dp" />
+      tools:layout_height="56dp"
+      tools:alpha="0.87"
+      tools:background="?android:colorBackground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

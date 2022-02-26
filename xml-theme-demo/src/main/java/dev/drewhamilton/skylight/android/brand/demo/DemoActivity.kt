@@ -36,18 +36,24 @@ class DemoActivity : AppCompatActivity() {
     private var isBottomSheetShowing: Boolean = false
     private var isAlertDialogShowing: Boolean = false
 
+    // DeferredColor must be used because resource colors can't refer to attributes:
+    private val navigationBarBackdrop = SdkIntDeferredColor(
+        minSdk = DeferredColor.Resource(R.color.navigationBarBackdrop),
+        sdk27 = DeferredColor.Attribute(android.R.attr.colorBackground).withAlpha(0.87f),
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         if (savedInstanceState == null) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
         }
         isDynamicColorsEnabled = savedInstanceState?.getBoolean(KEY_IS_DYNAMIC_COLORS_ENABLED) ?: false
-        val defaultFullscreen = Build.VERSION.SDK_INT >= 29
-        isFullscreen = savedInstanceState?.getBoolean(KEY_IS_FULLSCREEN) ?: defaultFullscreen
+        isFullscreen = savedInstanceState?.getBoolean(KEY_IS_FULLSCREEN) ?: true
         applySelectedTheme()
         WindowCompat.setDecorFitsSystemWindows(window, !isFullscreen)
 
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        binding.navigationBarBackdrop.setBackgroundColor(navigationBarBackdrop.resolve(this))
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, windowInsets ->
             with(windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())) {
@@ -56,7 +62,7 @@ class DemoActivity : AppCompatActivity() {
                 binding.scrollView.updatePadding(bottom = bottom)
 
                 binding.statusBarBackdrop.setHeight(top)
-                binding.navigationBarBackrop.setHeight(bottom)
+                binding.navigationBarBackdrop.setHeight(bottom)
             }
 
             windowInsets
@@ -160,7 +166,7 @@ class DemoActivity : AppCompatActivity() {
         }
     }
 
-    private fun showBottomSheet() = BottomSheetDialog(this).apply {
+    private fun showBottomSheet() = FixedBottomSheetDialog(this).apply {
         val bottomSheetBinding = BottomSheetBinding.inflate(layoutInflater)
         setContentView(bottomSheetBinding.root)
 

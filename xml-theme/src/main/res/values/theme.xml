@@ -66,10 +66,18 @@
 
     <item name="elevationOverlayColor">?colorTertiary</item>
 
-    <!--region shape attributes-->
+    <!--region Shape attributes-->
     <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Skylight.SmallComponent</item>
     <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Skylight.MediumComponent</item>
     <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Skylight.LargeComponent</item>
+    <!--endregion-->
+
+    <!--region Theme overlays-->
+    <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Skylight.Light.BottomSheetDialog</item>
+    <!--endregion-->
+
+    <!--region Widget styles-->
+    <item name="materialCardViewStyle">?materialCardViewFilledStyle</item>
     <!--endregion-->
   </style>
 
@@ -122,10 +130,18 @@
 
     <item name="elevationOverlayColor">?colorTertiary</item>
 
-    <!--region shape attributes-->
+    <!--region Shape attributes-->
     <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Skylight.SmallComponent</item>
     <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Skylight.MediumComponent</item>
     <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Skylight.LargeComponent</item>
+    <!--endregion-->
+
+    <!--region Theme overlays-->
+    <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Skylight.Dark.BottomSheetDialog</item>
+    <!--endregion-->
+
+    <!--region Widget styles-->
+    <item name="materialCardViewStyle">?materialCardViewFilledStyle</item>
     <!--endregion-->
   </style>
 
