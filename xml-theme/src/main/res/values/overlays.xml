@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style
+      name="ThemeOverlay.Skylight.Light.BottomSheetDialog"
+      parent="Base.V21.ThemeOverlay.Skylight.Light.BottomSheetDialog"
+      />
+
+  <style
+      name="ThemeOverlay.Skylight.Dark.BottomSheetDialog"
+      parent="ThemeOverlay.Material3.BottomSheetDialog"
+      />
+
+  <style
+      name="Base.V21.ThemeOverlay.Skylight.Light.BottomSheetDialog"
+      parent="ThemeOverlay.Material3.BottomSheetDialog"
+      >
+
+    <item name="android:navigationBarColor">?colorOutline</item>
+
+  </style>
+
+</resources>

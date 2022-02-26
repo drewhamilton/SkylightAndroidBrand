@@ -47,8 +47,7 @@ class DemoActivity : AppCompatActivity() {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
         }
         isDynamicColorsEnabled = savedInstanceState?.getBoolean(KEY_IS_DYNAMIC_COLORS_ENABLED) ?: false
-        val defaultFullscreen = Build.VERSION.SDK_INT >= 29
-        isFullscreen = savedInstanceState?.getBoolean(KEY_IS_FULLSCREEN) ?: defaultFullscreen
+        isFullscreen = savedInstanceState?.getBoolean(KEY_IS_FULLSCREEN) ?: true
         applySelectedTheme()
         WindowCompat.setDecorFitsSystemWindows(window, !isFullscreen)
 
@@ -167,7 +166,7 @@ class DemoActivity : AppCompatActivity() {
         }
     }
 
-    private fun showBottomSheet() = BottomSheetDialog(this).apply {
+    private fun showBottomSheet() = FixedBottomSheetDialog(this).apply {
         val bottomSheetBinding = BottomSheetBinding.inflate(layoutInflater)
         setContentView(bottomSheetBinding.root)
 
