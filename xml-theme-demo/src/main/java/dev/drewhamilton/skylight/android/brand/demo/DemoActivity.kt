@@ -36,6 +36,12 @@ class DemoActivity : AppCompatActivity() {
     private var isBottomSheetShowing: Boolean = false
     private var isAlertDialogShowing: Boolean = false
 
+    // DeferredColor must be used because resource colors can't refer to attributes:
+    private val navigationBarBackdrop = SdkIntDeferredColor(
+        minSdk = DeferredColor.Resource(R.color.navigationBarBackdrop),
+        sdk27 = DeferredColor.Attribute(android.R.attr.colorBackground).withAlpha(0.87f),
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         if (savedInstanceState == null) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
@@ -48,6 +54,7 @@ class DemoActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        binding.navigationBarBackdrop.setBackgroundColor(navigationBarBackdrop.resolve(this))
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, windowInsets ->
             with(windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())) {
@@ -56,7 +63,7 @@ class DemoActivity : AppCompatActivity() {
                 binding.scrollView.updatePadding(bottom = bottom)
 
                 binding.statusBarBackdrop.setHeight(top)
-                binding.navigationBarBackrop.setHeight(bottom)
+                binding.navigationBarBackdrop.setHeight(bottom)
             }
 
             windowInsets
