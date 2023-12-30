@@ -2,5 +2,3 @@ rootProject.name = "Skylight Android Brand"
 
 include ':xml-theme'
 include ':xml-theme-demo'
-
-enableFeaturePreview('VERSION_CATALOGS')
