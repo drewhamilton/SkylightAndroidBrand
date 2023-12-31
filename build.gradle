@@ -41,13 +41,6 @@ allprojects { project ->
         // Don't cache snapshots:
         resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
     }
-
-    //noinspection UnnecessaryQualifiedReference
-    project.plugins.withType(com.android.build.gradle.LibraryPlugin) {
-        project.android.libraryVariants.all { variant ->
-            variant.generateBuildConfigProvider.get().enabled = false
-        }
-    }
 }
 
 task clean(type: Delete) {

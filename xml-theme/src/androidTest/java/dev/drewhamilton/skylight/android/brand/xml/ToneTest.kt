@@ -1,6 +1,7 @@
 package dev.drewhamilton.skylight.android.brand.xml
 
 import androidx.annotation.ColorRes
+import androidx.core.content.ContextCompat
 import androidx.test.platform.app.InstrumentationRegistry
 import com.google.android.material.color.calculateTone
 import org.junit.Assert.assertEquals
@@ -344,6 +345,6 @@ class ToneTest {
     }
 
     private fun calculateResourceTone(@ColorRes res: Int): Float {
-        return calculateTone(context.getColor(res))
+        return calculateTone(ContextCompat.getColor(context, res))
     }
 }

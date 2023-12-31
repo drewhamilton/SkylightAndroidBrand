@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+    namespace "dev.drewhamilton.skylight.android.brand.demo"
     compileSdkVersion projectVersions.compileSdk
 
     defaultConfig {
