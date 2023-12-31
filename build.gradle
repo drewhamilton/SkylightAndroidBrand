@@ -30,6 +30,9 @@ ext {
 }
 
 allprojects { project ->
+    group = rootProject.property("GROUP")
+    version = rootProject.property("VERSION_NAME")
+
     repositories {
         google()
         mavenCentral()
