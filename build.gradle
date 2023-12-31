@@ -12,7 +12,7 @@ buildscript {
 }
 
 ext.projectVersions = [
-    compileSdk: 31,
+    compileSdk: 34,
     minSdk: 21,
     targetSdk: 30,
 ]
