@@ -19,3 +19,7 @@ kotlin-gradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22"
 kotlinx-binaryCompatibilityValidator = "org.jetbrains.kotlinx:binary-compatibility-validator:0.13.2"
 
 materialComponents = "com.google.android.material:material:1.11.0"
+
+[plugins]
+
+mavenPublish = { id = "com.vanniktech.maven.publish", version = "0.26.0" }

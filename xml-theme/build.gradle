@@ -1,13 +1,10 @@
+import com.vanniktech.maven.publish.SonatypeHost
+
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    alias(libs.plugins.mavenPublish)
 }
-
-ext {
-    artifactName = rootProject.POM_ARTIFACT_ID
-    publishedDescription = 'An Android theme for Skylight apps.'
-}
-apply from: '../publish.gradle'
 
 android {
     namespace "dev.drewhamilton.skylight.android.brand.xml"
@@ -16,7 +13,7 @@ android {
     defaultConfig {
         minSdkVersion projectVersions.minSdk
         targetSdkVersion projectVersions.targetSdk
-        versionName version
+        versionName rootProject.property("VERSION_NAME")
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -53,4 +50,36 @@ dependencies {
     androidTestImplementation(libs.junit)
     androidTestImplementation(libs.androidx.testRules)
     androidTestImplementation(libs.androidx.testRunner)
+}
+
+mavenPublishing {
+    pom {
+        name.set(property("POM_ARTIFACT_ID"))
+        description.set("An Android theme for Skylight apps.")
+
+        url.set("https://github.com/drewhamilton/SkylightAndroidBrand")
+        licenses {
+            license {
+                name.set("The Apache Software License, Version 2.0")
+                url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+            }
+        }
+
+        developers {
+            developer {
+                id.set("drewhamilton")
+                name.set("Drew Hamilton")
+                email.set("software@drewhamilton.dev")
+            }
+        }
+
+        scm {
+            connection.set("scm:git:github.com/drewhamilton/SkylightAndroidBrand.git")
+            developerConnection.set("scm:git:ssh://github.com/drewhamilton/SkylightAndroidBrand.git")
+            url.set("https://github.com/drewhamilton/SkylightAndroidBrand")
+        }
+    }
+
+    publishToMavenCentral(SonatypeHost.DEFAULT, true)
+    signAllPublications()
 }
