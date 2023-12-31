@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.15.2
+_2023-12-30_
+
+Compile with Material Components version 1.11.0.
+
 ## 0.15.1
 _2022-02-26_
 

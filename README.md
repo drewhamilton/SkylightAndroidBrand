@@ -8,7 +8,6 @@ apps.
 ## Download
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/dev.drewhamilton.skylight.android.brand/skylight-brand-xml-theme/badge.svg)](https://maven-badges.herokuapp.com/maven-central/dev.drewhamilton.skylight.android.brand/skylight-brand-xml-theme)
 
-
 Skylight Android is available on Maven Central. It is still in pre-release development, and the API
 may undergo breaking changes before version 1.0.0.
 
