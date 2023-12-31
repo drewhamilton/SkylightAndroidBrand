@@ -10,7 +10,7 @@ androidx-junitExt = "androidx.test.ext:junit:1.1.5"
 androidx-testRules = "androidx.test:rules:1.3.0"
 androidx-testRunner = "androidx.test:runner:1.3.0"
 
-deferredResources = "com.backbase.oss.deferredresources:deferred-resources:1.6.0"
+deferredResources = "com.backbase.oss.deferredresources:deferred-resources:1.6.1"
 
 junit = "junit:junit:4.13.2"
 
