@@ -1,6 +1,5 @@
 package dev.drewhamilton.skylight.android.brand.demo
 
-import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
@@ -14,13 +13,13 @@ import androidx.viewbinding.ViewBinding
 import com.backbase.deferredresources.DeferredColor
 import com.backbase.deferredresources.color.SdkIntDeferredColor
 import com.backbase.deferredresources.color.withAlpha
-import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.color.DynamicColors
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import dev.drewhamilton.skylight.android.brand.demo.databinding.BottomSheetBinding
 import dev.drewhamilton.skylight.android.brand.demo.databinding.DemoBinding
+import dev.drewhamilton.skylight.android.brand.xml.R as SkylightAndroidBrandXmlR
 
 class DemoActivity : AppCompatActivity() {
 
@@ -131,7 +130,7 @@ class DemoActivity : AppCompatActivity() {
     }
 
     private fun applySelectedTheme(recreate: Boolean = false) {
-        val theme = if (isFullscreen) R.style.Theme_Skylight_Fullscreen else R.style.Theme_Skylight
+        val theme = if (isFullscreen) SkylightAndroidBrandXmlR.style.Theme_Skylight_Fullscreen else SkylightAndroidBrandXmlR.style.Theme_Skylight
         setTheme(theme)
 
         if (isDynamicColorsEnabled) DynamicColors.applyIfAvailable(this)
@@ -143,8 +142,8 @@ class DemoActivity : AppCompatActivity() {
         isErrorSnackbarShowing = true
         val snackbar = Snackbar.make(root, "This is a serious error", Snackbar.LENGTH_INDEFINITE)
         with(snackbar) {
-            val colorError = DeferredColor.Attribute(R.attr.colorError).resolve(context)
-            val colorOnError = DeferredColor.Attribute(R.attr.colorOnError)
+            val colorError = DeferredColor.Attribute(SkylightAndroidBrandXmlR.attr.colorError).resolve(context)
+            val colorOnError = DeferredColor.Attribute(SkylightAndroidBrandXmlR.attr.colorOnError)
             val textOnError = SdkIntDeferredColor(
                 minSdk = colorOnError,
                 sdk23 = DeferredColor.Resource(R.color.button_text_on_error),

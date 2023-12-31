@@ -10,6 +10,7 @@ ext {
 apply from: '../publish.gradle'
 
 android {
+    namespace "dev.drewhamilton.skylight.android.brand.xml"
     compileSdkVersion projectVersions.compileSdk
 
     defaultConfig {
