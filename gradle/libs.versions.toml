@@ -14,7 +14,7 @@ deferredResources = "com.backbase.oss.deferredresources:deferred-resources:1.6.1
 
 junit = "junit:junit:4.13.2"
 
-kotlin-gradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22"
+kotlin-gradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.23"
 
 kotlinx-binaryCompatibilityValidator = "org.jetbrains.kotlinx:binary-compatibility-validator:0.14.0"
 
