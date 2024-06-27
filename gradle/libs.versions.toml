@@ -8,7 +8,7 @@ androidx-coreKtx = "androidx.core:core-ktx:1.13.1"
 androidx-espresso = "androidx.test.espresso:espresso-intents:3.6.1"
 androidx-junitExt = "androidx.test.ext:junit:1.2.1"
 androidx-testRules = "androidx.test:rules:1.6.0"
-androidx-testRunner = "androidx.test:runner:1.6.0"
+androidx-testRunner = "androidx.test:runner:1.6.1"
 
 deferredResources = "com.backbase.oss.deferredresources:deferred-resources:1.6.1"
 
