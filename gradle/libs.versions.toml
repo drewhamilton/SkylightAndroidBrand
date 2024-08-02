@@ -16,7 +16,7 @@ junit = "junit:junit:4.13.2"
 
 kotlin-gradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.0"
 
-kotlinx-binaryCompatibilityValidator = "org.jetbrains.kotlinx:binary-compatibility-validator:0.16.2"
+kotlinx-binaryCompatibilityValidator = "org.jetbrains.kotlinx:binary-compatibility-validator:0.16.3"
 
 materialComponents = "com.google.android.material:material:1.12.0"
 
