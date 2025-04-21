@@ -1,6 +1,6 @@
 [libraries]
 
-android-gradle = "com.android.tools.build:gradle:8.9.1"
+android-gradle = "com.android.tools.build:gradle:8.9.2"
 
 androidx-appCompat = "androidx.appcompat:appcompat:1.7.0"
 androidx-constraintLayout = "androidx.constraintlayout:constraintlayout:2.2.1"
